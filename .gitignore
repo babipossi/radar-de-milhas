@@ -1,0 +1,4 @@
+.DS_Store
+__pycache__/
+# Protótipo publicado no claude.ai (a versão real fica em docs/)
+radar-de-milhas.html

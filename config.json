@@ -1,0 +1,78 @@
+{
+  "origin": "GRU",
+  "miles": {
+    "windows": {
+      "ida": { "start": "2026-12-10", "end": "2026-12-22" },
+      "volta": { "start": "2027-01-04", "end": "2027-01-10" }
+    }
+  },
+  "roundtrip": {
+    "destination": "BLR",
+    "destinationCity": "Bangalore",
+    "via": [
+      { "code": "DOH", "city": "Doha" },
+      { "code": "FRA", "city": "Frankfurt" }
+    ],
+    "windows": {
+      "ida": { "start": "2026-12-15", "end": "2026-12-21" },
+      "volta": { "start": "2027-01-04", "end": "2027-01-08" }
+    },
+    "dailyFavorites": 4,
+    "dailyRotation": 3,
+    "reference": 10000
+  },
+  "regions": {
+    "me": "Oriente Médio",
+    "eu": "Europa",
+    "af": "África",
+    "as": "Ásia"
+  },
+  "routes": [
+    { "code": "DOH", "city": "Doha", "region": "me", "cash": 4922 },
+    { "code": "DXB", "city": "Dubai", "region": "me", "cash": 5100 },
+    { "code": "IST", "city": "Istambul", "region": "me", "cash": 4300 },
+    { "code": "LHR", "city": "Londres", "region": "eu", "cash": 4100 },
+    { "code": "FRA", "city": "Frankfurt", "region": "eu", "cash": 3900 },
+    { "code": "LIS", "city": "Lisboa", "region": "eu", "cash": 3300 },
+    { "code": "MAD", "city": "Madri", "region": "eu", "cash": 3600 },
+    { "code": "CDG", "city": "Paris", "region": "eu", "cash": 3800 },
+    { "code": "JNB", "city": "Joanesburgo", "region": "af", "cash": 3400 },
+    { "code": "CPT", "city": "Cidade do Cabo", "region": "af", "cash": 3900 },
+    { "code": "ADD", "city": "Adis Abeba", "region": "af", "cash": 3700 },
+    { "code": "BLR", "city": "Bangalore", "region": "as", "cash": 5800 },
+    { "code": "BKK", "city": "Bangkok", "region": "as", "cash": 6300 }
+  ],
+  "programs": {
+    "alaska": { "name": "Alaska Atmos", "milheiro": 100 },
+    "american": { "name": "American AAdvantage", "milheiro": 95 },
+    "qatar": { "name": "Qatar Privilege Club", "milheiro": 80 },
+    "emirates": { "name": "Emirates Skywards", "milheiro": 110 },
+    "qantas": { "name": "Qantas", "milheiro": 90 },
+    "turkish": { "name": "Turkish Miles&Smiles", "milheiro": 70 },
+    "aeroplan": { "name": "Aeroplan", "milheiro": 90 },
+    "lifemiles": { "name": "LifeMiles", "milheiro": 75 },
+    "united": { "name": "United MileagePlus", "milheiro": 100 },
+    "azul": { "name": "Azul Fidelidade", "milheiro": 20 },
+    "smiles": { "name": "Smiles", "milheiro": 18 },
+    "flyingblue": { "name": "Flying Blue", "milheiro": 85 },
+    "virginatlantic": { "name": "Virgin Atlantic", "milheiro": 80 },
+    "delta": { "name": "Delta SkyMiles", "milheiro": 70 },
+    "etihad": { "name": "Etihad Guest", "milheiro": 90 },
+    "ethiopian": { "name": "Ethiopian ShebaMiles", "milheiro": 80 },
+    "lufthansa": { "name": "Lufthansa Miles&More", "milheiro": 110 },
+    "aeromexico": { "name": "Aeromexico Club Premier", "milheiro": 60 },
+    "singapore": { "name": "Singapore KrisFlyer", "milheiro": 100 },
+    "saudia": { "name": "Saudia AlFursan", "milheiro": 80 },
+    "finnair": { "name": "Finnair Plus", "milheiro": 90 },
+    "eurobonus": { "name": "SAS EuroBonus", "milheiro": 90 },
+    "connectmiles": { "name": "Copa ConnectMiles", "milheiro": 80 },
+    "velocity": { "name": "Virgin Australia Velocity", "milheiro": 90 },
+    "jetblue": { "name": "JetBlue TrueBlue", "milheiro": 90 }
+  },
+  "alerts": {
+    "milesThreshold": 30,
+    "cashThreshold": 20,
+    "businessFactor": 1.5
+  },
+  "fx": 5.4
+}

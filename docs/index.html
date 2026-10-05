@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Radar de Milhas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: painel de embarque — faixa de controles no topo, grade de cards por destino, alertas e configurações abaixo */
+:root {
+  --bg: #EDF1F5;
+  --surface: #FFFFFF;
+  --surface-2: #F5F7FA;
+  --ink: #142133;
+  --muted: #5B6B80;
+  --line: #D5DDE7;
+  --accent: #1D5FA8;
+  --accent-soft: #E3EDF9;
+  --good: #1E7D4F;
+  --good-soft: #E1F2E8;
+  --warn: #9A6208;
+  --warn-soft: #FBF0DC;
+  --bad: #B23A3A;
+  --bad-soft: #F9E4E4;
+  --biz: #6B3FA0;
+  --biz-soft: #EFE7F8;
+  --tg: #E6F1FB;
+  --font-display: "Barlow Condensed", "Arial Narrow", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F1620; --surface: #17212D; --surface-2: #1C2836; --ink: #E6ECF3; --muted: #93A3B6;
+    --line: #2A3A4D; --accent: #74AAEA; --accent-soft: #1A2C42;
+    --good: #52C48D; --good-soft: #15302A; --warn: #E2A33B; --warn-soft: #33281A;
+    --bad: #EF7A7A; --bad-soft: #3A1F24; --biz: #B994E8; --biz-soft: #2A2140; --tg: #1A2A3B;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0F1620; --surface: #17212D; --surface-2: #1C2836; --ink: #E6ECF3; --muted: #93A3B6;
+  --line: #2A3A4D; --accent: #74AAEA; --accent-soft: #1A2C42;
+  --good: #52C48D; --good-soft: #15302A; --warn: #E2A33B; --warn-soft: #33281A;
+  --bad: #EF7A7A; --bad-soft: #3A1F24; --biz: #B994E8; --biz-soft: #2A2140; --tg: #1A2A3B;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 16px; padding-block: 20px 48px; display: grid; gap: 20px; }
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+button, input, select { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Cabeçalho */
+.top { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px; }
+.brand h1 { font-family: var(--font-display); font-weight: 700; font-size: 2.2rem; letter-spacing: 0.01em; line-height: 1; }
+.brand p { margin: 4px 0 0; color: var(--muted); }
+.demo { display: flex; gap: 10px; align-items: flex-start; background: var(--warn-soft); color: var(--ink); border: 1px solid color-mix(in srgb, var(--warn) 35%, transparent); border-radius: 10px; padding: 10px 14px; font-size: 0.9rem; }
+.demo strong { color: var(--warn); }
+
+/* Controles */
+.controls { display: grid; gap: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px; }
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.seg { display: inline-flex; background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 3px; gap: 3px; }
+.seg button { border: 0; background: transparent; padding: 8px 14px; border-radius: 7px; font-weight: 500; display: grid; text-align: left; line-height: 1.25; }
+.seg button small { color: var(--muted); font-weight: 400; font-size: 0.78rem; }
+.seg button[aria-pressed="true"] { background: var(--surface); box-shadow: 0 1px 3px rgba(0,0,0,.12); color: var(--accent); }
+.chip { border: 1px solid var(--line); background: var(--surface); padding: 6px 12px; border-radius: 999px; font-size: 0.88rem; }
+.chip[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); font-weight: 500; }
+.label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 600; margin-right: 4px; }
+.toggle { display: inline-flex; gap: 6px; align-items: center; font-size: 0.88rem; }
+
+/* Resumo */
+.summary { display: flex; flex-wrap: wrap; gap: 8px 20px; color: var(--muted); font-size: 0.92rem; }
+.summary b { color: var(--ink); font-weight: 600; }
+
+/* Cards */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 14px; align-items: start; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; display: grid; min-width: 0; overflow: hidden; }
+.card.alert { border-color: var(--good); box-shadow: 0 0 0 1px var(--good) inset; }
+.card-head { display: flex; justify-content: space-between; gap: 10px; padding: 14px 16px 10px; align-items: flex-start; }
+.iata { font-family: var(--font-display); font-weight: 700; font-size: 2.4rem; line-height: 0.95; letter-spacing: 0.02em; }
+.city { color: var(--muted); font-size: 0.9rem; }
+.route { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); }
+.badge { font-size: 0.78rem; font-weight: 600; padding: 4px 9px; border-radius: 999px; white-space: nowrap; }
+.b-good { background: var(--good-soft); color: var(--good); }
+.b-warn { background: var(--warn-soft); color: var(--warn); }
+.b-bad { background: var(--bad-soft); color: var(--bad); }
+.b-none { background: var(--surface-2); color: var(--muted); }
+.best { padding: 0 16px 12px; display: grid; gap: 4px; }
+.pts { font-family: var(--font-display); font-weight: 600; font-size: 1.9rem; line-height: 1.05; }
+.pts small { font-family: var(--font-body); font-size: 0.85rem; font-weight: 500; color: var(--muted); margin-left: 4px; }
+.meta { font-size: 0.86rem; color: var(--muted); }
+.meta b { color: var(--ink); font-weight: 500; }
+.biz { margin: 0 16px 12px; padding: 8px 10px; border-radius: 10px; font-size: 0.86rem; background: var(--surface-2); color: var(--muted); }
+.biz.worth { background: var(--biz-soft); color: var(--biz); font-weight: 500; }
+.hint { margin: 0 16px 12px; padding: 8px 10px; border-radius: 10px; font-size: 0.84rem; background: var(--accent-soft); color: var(--ink); }
+.hint b { color: var(--accent); }
+.empty { padding: 0 16px 16px; color: var(--muted); font-size: 0.9rem; }
+details { border-top: 1px solid var(--line); }
+summary { padding: 10px 16px; cursor: pointer; font-size: 0.88rem; color: var(--accent); font-weight: 500; list-style: none; display: flex; justify-content: space-between; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "▾"; transition: transform .15s; }
+details[open] summary::after { transform: rotate(180deg); }
+.opts { display: grid; padding: 0 16px; }
+.opt { display: grid; gap: 2px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 0.86rem; min-width: 0; }
+.opt:last-child { border-bottom: 0; }
+.opt-l1 { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 10px; align-items: baseline; }
+.opt-l1 b { font-weight: 600; }
+.opt-l2 { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 10px; color: var(--muted); font-size: 0.82rem; }
+.opt a { color: var(--accent); white-space: nowrap; }
+.collapse { display: block; width: calc(100% - 32px); margin: 4px 16px 12px; border: 1px solid var(--line); background: var(--surface-2); color: var(--accent); padding: 7px; border-radius: 8px; font-size: 0.86rem; font-weight: 500; }
+.pct-good { color: var(--good); font-weight: 600; }
+.pct-warn { color: var(--warn); font-weight: 600; }
+.pct-bad { color: var(--bad); font-weight: 600; }
+
+/* Seções inferiores */
+.lower { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 14px; align-items: start; }
+@media (max-width: 860px) { .lower { grid-template-columns: minmax(0, 1fr); } }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: grid; gap: 12px; min-width: 0; }
+.panel h2 { font-family: var(--font-display); font-weight: 600; font-size: 1.4rem; letter-spacing: 0.01em; }
+.panel > p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+.tg-chat { background: var(--tg); border-radius: 12px; padding: 12px; display: grid; gap: 10px; max-height: 460px; overflow-y: auto; }
+.msg { background: var(--surface); border-radius: 12px 12px 12px 4px; padding: 10px 12px; font-size: 0.86rem; box-shadow: 0 1px 2px rgba(0,0,0,.08); max-width: 92%; white-space: pre-line; }
+.msg .bot { font-weight: 600; color: var(--accent); font-size: 0.8rem; }
+.msg a { color: var(--accent); }
+.tg-status { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; font-size: 0.86rem; color: var(--muted); }
+.btn { border: 1px solid var(--line); background: var(--surface-2); padding: 7px 12px; border-radius: 8px; font-size: 0.86rem; }
+.btn[disabled] { opacity: 0.55; cursor: not-allowed; }
+.settings { display: grid; gap: 16px; }
+.fields { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); gap: 10px 14px; }
+.field { display: grid; gap: 4px; font-size: 0.84rem; min-width: 0; }
+.field span { color: var(--muted); }
+.field input { width: 100%; padding: 7px 9px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-2); font-variant-numeric: tabular-nums; }
+.settings h3 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 600; }
+.settings .note { font-size: 0.82rem; color: var(--muted); margin: 0; }
+.foot { color: var(--muted); font-size: 0.82rem; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+<style>body { margin: 0; } [hidden] { display: none !important; } :root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }</style>
+<style>
+.status { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.84rem; color: var(--muted); }
+.status b { color: var(--ink); font-weight: 500; }
+.loading { color: var(--muted); padding: 24px 0; }
+.updater { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; display: grid; gap: 10px; }
+.updater-row { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+.updater h2 { font-family: var(--font-display); font-weight: 600; font-size: 1.2rem; margin-right: 6px; }
+.updater .btn-primary { border: 0; background: var(--accent); color: var(--surface); padding: 8px 16px; border-radius: 8px; font-weight: 600; }
+.updater .btn-primary[disabled] { opacity: 0.55; cursor: wait; }
+.updater .msg-line { font-size: 0.86rem; color: var(--muted); }
+.updater .msg-line.ok { color: var(--good); }
+.updater .msg-line.err { color: var(--bad); }
+.updater input[type="password"], .updater input[type="text"] { padding: 7px 9px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-2); min-width: 0; width: min(100%, 320px); }
+.linkbtn { border: 0; background: none; color: var(--accent); padding: 0; font-size: 0.84rem; text-decoration: underline; }
+[title] { text-decoration-style: dotted; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <h1>Radar de Milhas</h1>
+      <p>Assentos-prêmio saindo de Guarulhos e ida e volta em dinheiro para Bangalore.</p>
+    </div>
+  </header>
+
+  <div class="demo" role="note" id="sample-note" hidden>
+    <div><strong>Dados de exemplo.</strong> <span id="sample-text"></span></div>
+  </div>
+  <div class="status" id="status"></div>
+
+  <section class="updater" aria-label="Atualizar agora">
+    <div class="updater-row" id="upd-ready" hidden>
+      <h2>Atualizar agora</h2>
+      <label class="toggle"><input type="radio" name="parte" id="parte-milhas" value="milhas" checked> Só milhas <span class="msg-line">(não gasta buscas)</span></label>
+      <label class="toggle"><input type="radio" name="parte" id="parte-tudo" value="tudo"> Milhas e dinheiro <span class="msg-line" id="parte-tudo-cost">(gasta 7 buscas)</span></label>
+      <button type="button" class="btn-primary" id="upd-run">Atualizar</button>
+      <button type="button" class="linkbtn" id="upd-forget">Remover token deste aparelho</button>
+    </div>
+    <div class="updater-row" id="upd-setup" hidden>
+      <h2>Atualizar agora</h2>
+      <span class="msg-line">Para usar o botão neste aparelho, cole o token do GitHub (veja o README). Ele fica salvo só neste navegador.</span>
+      <input type="password" id="upd-token" placeholder="github_pat_…" autocomplete="off">
+      <input type="text" id="upd-repo" placeholder="usuario/repositorio" autocomplete="off">
+      <button type="button" class="btn" id="upd-save">Salvar</button>
+    </div>
+    <div class="msg-line" id="upd-msg" role="status"></div>
+  </section>
+
+  <section class="controls" aria-label="Filtros">
+    <div class="row">
+      <div class="seg" role="group" aria-label="Forma de pagamento">
+        <button id="mode-miles" aria-pressed="true">Milhas<small>Seats.aero</small></button>
+        <button id="mode-cash" aria-pressed="false">Dinheiro<small>ida e volta · Google Flights</small></button>
+      </div>
+      <div class="seg" role="group" aria-label="Sentido">
+        <button id="dir-ida" aria-pressed="true">Ida · GRU → destino<small id="win-ida"></small></button>
+        <button id="dir-volta" aria-pressed="false">Volta · destino → GRU<small id="win-volta"></small></button>
+        <button id="dir-rt" aria-pressed="false" hidden>Ida e volta · GRU ⇄ BLR<small id="win-rt"></small></button>
+      </div>
+    </div>
+    <div class="row" id="regions">
+      <span class="label">Região</span>
+    </div>
+    <div class="row" id="filters-row">
+      <span class="label">Mostrar</span>
+      <label class="toggle"><input type="checkbox" id="only-alerts"> Só destinos em destaque</label>
+      <label class="toggle"><input type="checkbox" id="hide-empty"> Esconder destinos sem assento</label>
+    </div>
+  </section>
+
+  <div class="summary" id="summary"></div>
+
+  <section class="grid" id="grid" aria-label="Destinos"><p class="loading">Carregando dados…</p></section>
+
+  <section class="lower">
+    <div class="panel">
+      <h2>Destaques de hoje</h2>
+      <p>O que passa nas suas regras de alerta. No segundo passo, estas mensagens vão chegar pelo Telegram. Para milhas, os valores em reais aparecem só aqui.</p>
+      <div class="tg-chat" id="chat"></div>
+    </div>
+
+    <div class="panel settings">
+      <h2>Configurações</h2>
+      <p class="note">Mudanças aqui valem só neste navegador. Para mudar de vez (e para os alertas do Telegram), edite o arquivo config.json.</p>
+      <div class="fields">
+        <label class="field"><span>Destacar milhas quando estiver pelo menos (% mais barato que em dinheiro)</span><input id="cfg-threshold" type="number" min="0" max="95" step="5"></label>
+        <label class="field"><span>Destacar ida e volta em dinheiro quando estiver pelo menos (% abaixo da referência)</span><input id="cfg-cashthreshold" type="number" min="0" max="95" step="5"></label>
+        <label class="field"><span>Executiva vale a pena se custar até (× a econômica paga)</span><input id="cfg-bizfactor" type="number" min="1" max="5" step="0.1"></label>
+        <label class="field"><span>Referência ida e volta GRU ⇄ Bangalore (R$)</span><input id="cfg-rtcash" type="number" min="1" step="100"></label>
+        <label class="field"><span>Dólar (R$)</span><input id="cfg-fx" type="number" min="1" step="0.05"></label>
+      </div>
+      <div>
+        <h3>Custo do milheiro por programa (R$ por 1.000 pontos)</h3>
+        <p class="note">Usado só para calcular o desconto. Ajuste para o que você paga.</p>
+      </div>
+      <div class="fields" id="cfg-programs"></div>
+      <div>
+        <h3>Preço em dinheiro de referência, só ida, econômica (R$)</h3>
+        <p class="note">Régua para as milhas de cada destino. A executiva usa a mesma referência multiplicada pelo fator acima.</p>
+      </div>
+      <div class="fields" id="cfg-cash"></div>
+      <button class="btn" id="reset-cfg" type="button">Voltar aos valores do config.json</button>
+    </div>
+  </section>
+
+  <p class="foot">Milhas: API pessoal do Seats.aero Pro, atualizada uma vez por dia. O LATAM Pass não é coberto; quando aparecer assento da Qatar, cote também pela tabela fixa no WhatsApp da LATAM. Dinheiro: Google Flights pelo plano grátis do SerpApi, com as combinações favoritas verificadas todo dia e as demais em rodízio.</p>
+</div>
+
+<script>
+let DATA = null;
+let BASE = null;
+let cfg = null;
+const state = { mode: "miles", dir: "ida", regions: new Set(), onlyAlerts: false, hideEmpty: false };
+
+// ---------- Utilidades
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const fmtPts = n => n >= 1000 ? (n / 1000).toLocaleString("pt-BR", { maximumFractionDigits: 1 }) + "k" : String(n);
+const fmtPtsFull = n => n.toLocaleString("pt-BR");
+const fmtBRL = n => "R$" + Math.round(n).toLocaleString("pt-BR");
+const fmtPct = p => (p >= 0 ? "−" : "+") + Math.abs(Math.round(p * 100)) + "%";
+const fmtTax = t => t == null ? "taxas n/d" : "US$" + Math.round(t);
+function fmtDate(iso, long) {
+  const d = new Date(iso + "T12:00:00");
+  return d.toLocaleDateString("pt-BR", long ? { weekday: "short", day: "numeric", month: "short" } : { day: "2-digit", month: "2-digit" });
+}
+function fmtWindow(w) { return `${fmtDate(w.start, false)} a ${fmtDate(w.end, false)}`; }
+function hoursAgo(iso) {
+  const t = Date.parse(iso);
+  return isNaN(t) ? null : Math.max(0, Math.round((Date.now() - t) / 3600000));
+}
+function agoText(iso) {
+  const h = hoursAgo(iso);
+  if (h == null) return "";
+  if (h < 1) return "agora há pouco";
+  if (h < 24) return `há ${h}h`;
+  const d = Math.round(h / 24);
+  return `há ${d} dia${d > 1 ? "s" : ""}`;
+}
+function fmtDateTime(iso) {
+  const t = new Date(iso);
+  if (isNaN(t)) return "";
+  return t.toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo", weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
+}
+const agoSpan = iso => `<span title="${esc(fmtDateTime(iso))}">${agoText(iso)}</span>`;
+function stopsText(n) { return n == null ? "" : n === 0 ? "direto" : `${n} parada${n > 1 ? "s" : ""}`; }
+const progName = id => cfg.programs[id]?.name || id;
+const milheiro = id => cfg.programs[id]?.milheiro ?? 90;
+
+// ---------- Configurações (padrão do config.json + ajustes deste navegador)
+function baseFromData(c) {
+  return {
+    threshold: c.alerts.milesThreshold,
+    cashThreshold: c.alerts.cashThreshold,
+    bizFactor: c.alerts.businessFactor,
+    fx: c.fx,
+    rtCash: c.roundtrip.reference,
+    programs: structuredClone(c.programs),
+    cash: Object.fromEntries(c.routes.map(r => [r.code, r.cash]))
+  };
+}
+function loadCfg() {
+  cfg = structuredClone(BASE);
+  try {
+    const saved = JSON.parse(localStorage.getItem("radar-cfg-v2") || "null");
+    if (saved) {
+      for (const k of ["threshold", "cashThreshold", "bizFactor", "fx", "rtCash"]) if (typeof saved[k] === "number") cfg[k] = saved[k];
+      for (const [id, v] of Object.entries(saved.milheiro || {})) if (cfg.programs[id]) cfg.programs[id].milheiro = v;
+      Object.assign(cfg.cash, saved.cash || {});
+    }
+  } catch (e) {}
+}
+function saveCfg() {
+  try {
+    localStorage.setItem("radar-cfg-v2", JSON.stringify({
+      threshold: cfg.threshold, cashThreshold: cfg.cashThreshold, bizFactor: cfg.bizFactor, fx: cfg.fx, rtCash: cfg.rtCash,
+      milheiro: Object.fromEntries(Object.entries(cfg.programs).map(([id, p]) => [id, p.milheiro])),
+      cash: cfg.cash
+    }));
+  } catch (e) {}
+}
+
+// ---------- Milhas
+function routeLabel(code) { return state.dir === "ida" ? `GRU → ${code}` : `${code} → GRU`; }
+function seatsLink(code, date) {
+  const o = state.dir === "ida" ? "GRU" : code;
+  const d = state.dir === "ida" ? code : "GRU";
+  return `https://seats.aero/search?origins=${o}&destinations=${d}&date=${date}`;
+}
+function costBRL(program, fare) { return fare.pts / 1000 * milheiro(program) + (fare.tax || 0) * cfg.fx; }
+function pctClass(p, threshold) { return p >= threshold / 100 ? "good" : p >= 0 ? "warn" : "bad"; }
+const hasQatar = f => !!f && /\bQR\b/.test(f.airlines || "");
+
+function analyzeMiles() {
+  const byRoute = DATA.miles?.[state.dir] || {};
+  return DATA.config.routes.map(r => {
+    const ref = cfg.cash[r.code];
+    const opts = (byRoute[r.code] || []).map(o => {
+      const e = { ...o };
+      if (o.econ) { e.econCost = costBRL(o.program, o.econ); e.econPct = 1 - e.econCost / ref; }
+      if (o.biz) { e.bizCost = costBRL(o.program, o.biz); e.bizWorth = e.bizCost <= ref * cfg.bizFactor; }
+      return e;
+    });
+    const bestE = opts.filter(o => o.econ).sort((a, b) => b.econPct - a.econPct)[0] || null;
+    const bestB = opts.filter(o => o.biz).sort((a, b) => a.bizCost - b.bizCost)[0] || null;
+    const econAlert = !!bestE && bestE.econPct >= cfg.threshold / 100;
+    const bizAlert = !!bestB && bestB.bizWorth;
+    return { r, opts, bestE, bestB, econAlert, bizAlert, alert: econAlert || bizAlert, hasData: opts.length > 0, score: bestE?.econPct ?? -9 };
+  });
+}
+
+function milesCardHTML(a) {
+  const { r, opts, bestE, bestB } = a;
+  let badge = `<span class="badge b-none">sem assento</span>`;
+  if (bestE) {
+    const c = pctClass(bestE.econPct, cfg.threshold);
+    badge = `<span class="badge b-${c}">${bestE.econPct >= 0 ? `${fmtPct(bestE.econPct)} vs dinheiro` : `${fmtPct(bestE.econPct)} mais caro`}</span>`;
+  } else if (bestB) {
+    badge = `<span class="badge b-none">só executiva</span>`;
+  }
+  const best = bestE ? `
+      <div class="best">
+        <div class="pts num">${fmtPts(bestE.econ.pts)} pts<small>+ ${fmtTax(bestE.econ.tax)} · econômica</small></div>
+        <div class="meta"><b>${fmtDate(bestE.date, true)}</b> · ${esc(progName(bestE.program))}</div>
+        <div class="meta">${[esc(bestE.econ.airlines), stopsText(bestE.econ.stops), bestE.econ.seats ? `${bestE.econ.seats} assento${bestE.econ.seats > 1 ? "s" : ""}` : "", bestE.seenAt ? `visto ${agoSpan(bestE.seenAt)}` : ""].filter(Boolean).join(" · ")}</div>
+      </div>` : `<div class="empty">Nenhum assento em econômica nas datas monitoradas.</div>`;
+  let biz = "";
+  if (bestB) {
+    biz = bestB.bizWorth
+      ? `<div class="biz worth">Executiva vale a pena: ${fmtPts(bestB.biz.pts)} pts + ${fmtTax(bestB.biz.tax)} em ${fmtDate(bestB.date)} (${esc(progName(bestB.program))})</div>`
+      : `<div class="biz">Executiva a partir de ${fmtPts(bestB.biz.pts)} pts (${esc(progName(bestB.program))}). Não compensa pela sua regra.</div>`;
+  }
+  const hint = hasQatar(bestE?.econ) || hasQatar(bestB?.biz)
+    ? `<div class="hint"><b>Tabela fixa LATAM:</b> assento Qatar ${state.dir === "ida" ? "saindo do" : "chegando ao"} Brasil. Cote também no LATAM Pass pelo WhatsApp.</div>`
+    : "";
+  const rows = opts.slice()
+    .sort((x, y) => x.date.localeCompare(y.date) || (y.econPct ?? -9) - (x.econPct ?? -9))
+    .map(o => `
+      <div class="opt">
+        <div class="opt-l1">
+          <span><b class="num">${fmtDate(o.date, true)}</b> · ${esc(progName(o.program))}</span>
+          ${o.econ ? `<span class="num pct-${pctClass(o.econPct, cfg.threshold)}">${fmtPct(o.econPct)}</span>` : ""}
+        </div>
+        <div class="opt-l2">
+          <span class="num">Econ.: ${o.econ ? `${fmtPtsFull(o.econ.pts)} pts` : "—"} · Exec.: ${o.biz ? `${fmtPtsFull(o.biz.pts)} pts` : "—"}${(o.econ || o.biz).airlines ? ` · ${esc((o.econ || o.biz).airlines)}` : ""}</span>
+          <a href="${seatsLink(r.code, o.date)}" target="_blank" rel="noopener">Seats.aero ↗</a>
+        </div>
+      </div>`).join("");
+  const dates = new Set(opts.map(o => o.date)).size;
+  const details = opts.length ? `
+    <details>
+      <summary><span>${opts.length} opç${opts.length > 1 ? "ões" : "ão"} em ${dates} data${dates > 1 ? "s" : ""}</span></summary>
+      <div class="opts">${rows}</div>
+      <button type="button" class="collapse">Recolher ▴</button>
+    </details>` : "";
+  return `
+    <article class="card${a.alert ? " alert" : ""}">
+      <div class="card-head">
+        <div>
+          <div class="iata">${r.code}</div>
+          <div class="city">${esc(r.city)} · ${esc(DATA.config.regions[r.region])}</div>
+          <div class="route">${routeLabel(r.code)}</div>
+        </div>
+        ${badge}
+      </div>
+      ${best}${biz}${hint}${details}
+    </article>`;
+}
+
+function milesMessages(list) {
+  const msgs = [];
+  for (const a of list) {
+    const { r, bestE, bestB } = a;
+    if (a.econAlert) {
+      msgs.push({ score: bestE.econPct, text:
+`<span class="bot">Radar de Milhas</span>
+${routeLabel(r.code)} · ${fmtDate(bestE.date, true)} · Econômica
+${esc(progName(bestE.program))}: ${fmtPtsFull(bestE.econ.pts)} pts + ${fmtTax(bestE.econ.tax)}
+Custo estimado: ${fmtBRL(bestE.econCost)} (${fmtPct(bestE.econPct)} vs ${fmtBRL(cfg.cash[r.code])} em dinheiro)${hasQatar(bestE.econ) ? "\nCote também na tabela fixa do LATAM Pass." : ""}
+<a href="${seatsLink(r.code, bestE.date)}" target="_blank" rel="noopener">Abrir no Seats.aero</a>` });
+    }
+    if (a.bizAlert) {
+      msgs.push({ score: 1 - bestB.bizCost / (cfg.cash[r.code] * 4), text:
+`<span class="bot">Radar de Milhas</span>
+Executiva vale a pena · ${routeLabel(r.code)} · ${fmtDate(bestB.date, true)}
+${esc(progName(bestB.program))}: ${fmtPtsFull(bestB.biz.pts)} pts + ${fmtTax(bestB.biz.tax)}
+Custo estimado: ${fmtBRL(bestB.bizCost)}, perto da econômica paga (${fmtBRL(cfg.cash[r.code])})
+<a href="${seatsLink(r.code, bestB.date)}" target="_blank" rel="noopener">Abrir no Seats.aero</a>` });
+    }
+  }
+  return msgs;
+}
+
+// ---------- Ida e volta em dinheiro
+function googleRTLink(c) {
+  const rt = DATA.config.roundtrip;
+  return `https://www.google.com/travel/flights?q=${encodeURIComponent(`Flights from ${DATA.config.origin} to ${rt.destination} on ${c.out} returning ${c.back}`)}&curr=BRL&hl=pt-BR`;
+}
+function checkedText(c) {
+  if (!c.checkedAt) return "ainda não verificada";
+  const h = hoursAgo(c.checkedAt);
+  const when = `<span title="${esc(fmtDateTime(c.checkedAt))}">${h < 24 ? "verificada hoje" : `verificada ${agoText(c.checkedAt)}`}</span>`;
+  return c.fav ? `favorita, ${when}` : when;
+}
+function analyzeRT() {
+  const rt = DATA.config.roundtrip;
+  const combos = DATA.roundtrip?.combos || [];
+  return rt.via.map(v => {
+    const list = combos.filter(c => c.via?.[v.code]).map(c => ({ ...c, f: c.via[v.code] })).sort((a, b) => a.f.price - b.f.price);
+    const best = list[0] || null;
+    const pct = best ? 1 - best.f.price / cfg.rtCash : null;
+    return { v, list, best, pct, alert: !!best && pct >= cfg.cashThreshold / 100 };
+  });
+}
+function rtCardHTML(a) {
+  const { v, list, best, pct } = a;
+  const rt = DATA.config.roundtrip;
+  const head = `
+      <div class="card-head">
+        <div>
+          <div class="iata">${esc(rt.destination)}</div>
+          <div class="city">${esc(rt.destinationCity)} · via ${esc(v.city)}</div>
+          <div class="route">${esc(DATA.config.origin)} ⇄ ${esc(v.code)} ⇄ ${esc(rt.destination)}</div>
+        </div>
+        ${best ? `<span class="badge b-${pctClass(pct, cfg.cashThreshold)}">${pct >= 0 ? `${fmtPct(pct)} vs referência` : `${fmtPct(pct)} acima`}</span>` : `<span class="badge b-none">sem preço</span>`}
+      </div>`;
+  if (!best) return `<article class="card">${head}<div class="empty">Nenhum preço via ${esc(v.city)} encontrado ainda.</div></article>`;
+  const rows = list.slice(0, 12).map(c => {
+    const p = 1 - c.f.price / cfg.rtCash;
+    return `
+      <div class="opt">
+        <div class="opt-l1">
+          <span><b class="num">${fmtDate(c.out, true)} → ${fmtDate(c.back, true)}</b> · <span class="num">${fmtBRL(c.f.price)}</span></span>
+          <span class="num pct-${pctClass(p, cfg.cashThreshold)}">${fmtPct(p)}</span>
+        </div>
+        <div class="opt-l2">
+          <span>${esc(c.f.airlines)} · ida ~${Math.round(c.f.hoursOut)}h · ${checkedText(c)}</span>
+          <a href="${googleRTLink(c)}" target="_blank" rel="noopener">Google Flights ↗</a>
+        </div>
+      </div>`;
+  }).join("");
+  return `
+    <article class="card${a.alert ? " alert" : ""}">
+      ${head}
+      <div class="best">
+        <div class="pts num">${fmtBRL(best.f.price)}<small>ida e volta · econômica</small></div>
+        <div class="meta"><b>${fmtDate(best.out, true)} → ${fmtDate(best.back, true)}</b> · ${esc(best.f.airlines)}</div>
+        <div class="meta">${stopsText(best.f.stops)} na ida · ~${Math.round(best.f.hoursOut)}h · ${checkedText(best)} · referência ${fmtBRL(cfg.rtCash)}</div>
+      </div>
+      <details>
+        <summary><span>${Math.min(12, list.length)} combinações mais baratas (de ${list.length})</span></summary>
+        <div class="opts">${rows}</div>
+        <button type="button" class="collapse">Recolher ▴</button>
+      </details>
+    </article>`;
+}
+function rtMessages() {
+  return analyzeRT().filter(a => a.alert).map(a => ({ score: a.pct, text:
+`<span class="bot">Radar de Milhas</span>
+Ida e volta em dinheiro · GRU ⇄ BLR via ${esc(a.v.city)}
+${fmtDate(a.best.out, true)} → ${fmtDate(a.best.back, true)} · ${fmtBRL(a.best.f.price)} (${esc(a.best.f.airlines)})
+${fmtPct(a.pct)} vs sua referência de ${fmtBRL(cfg.rtCash)}
+<a href="${googleRTLink(a.best)}" target="_blank" rel="noopener">Abrir no Google Flights</a>` }));
+}
+
+// ---------- Tela
+function renderStatus() {
+  const m = DATA.miles, rt = DATA.roundtrip;
+  const parts = [];
+  const when = x => !x ? "<b>sem dados ainda</b>" : x.sample ? "<b>dados de exemplo</b>" : `última cotação <b>${fmtDateTime(x.updatedAt)}</b> (${agoText(x.updatedAt)})`;
+  parts.push(`Milhas: ${when(m)}`);
+  parts.push(`Dinheiro: ${when(rt)}`);
+  const sp = DATA.serpapi;
+  if (sp && sp.searchesLeft != null) parts.push(`SerpApi: <b>${sp.searchesLeft}</b> buscas restantes no mês`);
+  document.getElementById("status").innerHTML = parts.map(p => `<span>${p}</span>`).join("");
+  const sampleParts = [m?.sample && "milhas", rt?.sample && "ida e volta em dinheiro"].filter(Boolean);
+  document.getElementById("sample-note").hidden = sampleParts.length === 0;
+  document.getElementById("sample-text").textContent = sampleParts.length
+    ? `Os dados de ${sampleParts.join(" e ")} são fictícios, gerados para testar a página. Eles serão substituídos assim que as chaves das APIs forem configuradas.`
+    : "";
+}
+
+function render() {
+  const rtMode = state.mode === "cash";
+  document.getElementById("regions").hidden = rtMode;
+  document.getElementById("filters-row").hidden = rtMode;
+  const grid = document.getElementById("grid");
+  const milesAll = analyzeMiles();
+  const msgs = rtMessages().concat(milesMessages(milesAll.filter(a => state.regions.has(a.r.region))));
+
+  if (rtMode) {
+    const list = analyzeRT();
+    const combos = DATA.roundtrip?.combos?.length || 0;
+    const checked = (DATA.roundtrip?.combos || []).filter(c => c.checkedAt).length;
+    const rt = DATA.config.roundtrip;
+    document.getElementById("summary").innerHTML =
+      `<span><b>${rt.via.length}</b> rotas (${rt.via.map(v => "via " + esc(v.city)).join(" e ")})</span>
+       <span><b>${checked}</b> de ${combos} combinações de datas já verificadas</span>
+       <span>Atualização diária: <b>${rt.dailyFavorites} favoritas + ${rt.dailyRotation} em rodízio</b></span>`;
+    grid.innerHTML = list.sort((x, y) => (y.pct ?? -9) - (x.pct ?? -9)).map(rtCardHTML).join("");
+  } else {
+    const visible = milesAll
+      .filter(a => state.regions.has(a.r.region))
+      .filter(a => !state.onlyAlerts || a.alert)
+      .filter(a => !state.hideEmpty || a.hasData)
+      .sort((x, y) => (y.alert - x.alert) || (y.score - x.score));
+    const inRegion = milesAll.filter(a => state.regions.has(a.r.region));
+    document.getElementById("summary").innerHTML =
+      `<span><b>${inRegion.length}</b> destinos monitorados</span>
+       <span><b>${inRegion.filter(a => a.hasData).length}</b> com assento disponível</span>
+       <span><b>${inRegion.filter(a => a.alert).length}</b> em destaque (≥ ${cfg.threshold}% mais barato ou executiva que compensa)</span>`;
+    grid.innerHTML = !DATA.miles
+      ? `<p class="empty">Ainda não há dados de milhas. Eles aparecem depois da primeira execução com a chave do Seats.aero.</p>`
+      : visible.length ? visible.map(milesCardHTML).join("") : `<p class="empty">Nenhum destino com esses filtros.</p>`;
+  }
+
+  msgs.sort((a, b) => b.score - a.score);
+  document.getElementById("chat").innerHTML = msgs.length
+    ? msgs.slice(0, 8).map(m => `<div class="msg">${m.text}</div>`).join("")
+    : `<div class="msg">Nada passa nas suas regras hoje. Experimente baixar os percentuais nas configurações.</div>`;
+}
+
+function setDir(dir) {
+  state.dir = dir;
+  for (const d of ["ida", "volta", "rt"]) document.getElementById("dir-" + d).setAttribute("aria-pressed", dir === d);
+  render();
+}
+function setMode(mode) {
+  state.mode = mode;
+  const cash = mode === "cash";
+  document.getElementById("mode-miles").setAttribute("aria-pressed", !cash);
+  document.getElementById("mode-cash").setAttribute("aria-pressed", cash);
+  document.getElementById("dir-rt").hidden = !cash;
+  document.getElementById("dir-ida").hidden = cash;
+  document.getElementById("dir-volta").hidden = cash;
+  setDir(cash ? "rt" : "ida");
+}
+
+function bindNumber(id, get, set) {
+  const el = document.getElementById(id);
+  el.value = get();
+  el.oninput = () => {
+    const v = parseFloat(el.value);
+    if (!isNaN(v) && v >= 0) { set(v); saveCfg(); render(); }
+  };
+}
+function buildSettings() {
+  bindNumber("cfg-threshold", () => cfg.threshold, v => cfg.threshold = v);
+  bindNumber("cfg-cashthreshold", () => cfg.cashThreshold, v => cfg.cashThreshold = v);
+  bindNumber("cfg-bizfactor", () => cfg.bizFactor, v => cfg.bizFactor = v);
+  bindNumber("cfg-rtcash", () => cfg.rtCash, v => cfg.rtCash = v);
+  bindNumber("cfg-fx", () => cfg.fx, v => cfg.fx = v);
+  const progBox = document.getElementById("cfg-programs");
+  progBox.innerHTML = "";
+  for (const [id, p] of Object.entries(cfg.programs)) {
+    const l = document.createElement("label");
+    l.className = "field";
+    l.innerHTML = `<span>${esc(p.name)}</span><input id="mil-${id}" type="number" min="1" step="1">`;
+    progBox.appendChild(l);
+    bindNumber("mil-" + id, () => cfg.programs[id].milheiro, v => cfg.programs[id].milheiro = v);
+  }
+  const cashBox = document.getElementById("cfg-cash");
+  cashBox.innerHTML = "";
+  for (const r of DATA.config.routes) {
+    const l = document.createElement("label");
+    l.className = "field";
+    l.innerHTML = `<span>${r.code} · ${esc(r.city)}</span><input id="cash-${r.code}" type="number" min="1" step="50">`;
+    cashBox.appendChild(l);
+    bindNumber("cash-" + r.code, () => cfg.cash[r.code], v => cfg.cash[r.code] = v);
+  }
+}
+
+let uiReady = false;
+function applyData(data) {
+  DATA = data;
+  BASE = baseFromData(data.config);
+  loadCfg();
+  const c = data.config;
+  document.getElementById("win-ida").textContent = fmtWindow(c.miles.windows.ida);
+  document.getElementById("win-volta").textContent = fmtWindow(c.miles.windows.volta);
+  document.getElementById("win-rt").textContent = `ida ${fmtWindow(c.roundtrip.windows.ida)} · volta ${fmtWindow(c.roundtrip.windows.volta)}`;
+  if (!uiReady) { setupUI(c); uiReady = true; }
+  buildSettings();
+  renderStatus();
+  renderUpdater();
+  render();
+}
+
+function setupUI(c) {
+  const regionsRow = document.getElementById("regions");
+  for (const [id, name] of Object.entries(c.regions)) {
+    state.regions.add(id);
+    const b = document.createElement("button");
+    b.className = "chip";
+    b.id = "region-" + id;
+    b.textContent = name;
+    b.setAttribute("aria-pressed", "true");
+    b.onclick = () => {
+      if (state.regions.has(id)) state.regions.delete(id); else state.regions.add(id);
+      b.setAttribute("aria-pressed", state.regions.has(id));
+      render();
+    };
+    regionsRow.appendChild(b);
+  }
+  document.getElementById("mode-miles").onclick = () => setMode("miles");
+  document.getElementById("mode-cash").onclick = () => setMode("cash");
+  document.getElementById("dir-ida").onclick = () => setDir("ida");
+  document.getElementById("dir-volta").onclick = () => setDir("volta");
+  document.getElementById("dir-rt").onclick = () => setDir("rt");
+  document.getElementById("only-alerts").onchange = e => { state.onlyAlerts = e.target.checked; render(); };
+  document.getElementById("hide-empty").onchange = e => { state.hideEmpty = e.target.checked; render(); };
+  document.getElementById("reset-cfg").onclick = () => {
+    try { localStorage.removeItem("radar-cfg-v2"); } catch (e) {}
+    loadCfg(); buildSettings(); render();
+  };
+  document.getElementById("grid").addEventListener("click", e => {
+    const btn = e.target.closest(".collapse");
+    if (!btn) return;
+    const det = btn.closest("details");
+    det.open = false;
+    const card = det.closest(".card");
+    if (card.getBoundingClientRect().top < 0) card.scrollIntoView({ block: "start", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  });
+  setupUpdater();
+}
+
+// ---------- Botão "Atualizar agora": dispara o robô no GitHub com o token salvo neste navegador
+const store = {
+  get(k) { try { return localStorage.getItem(k) || ""; } catch (e) { return ""; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} },
+  del(k) { try { localStorage.removeItem(k); } catch (e) {} }
+};
+function guessRepo() {
+  const host = location.hostname;
+  if (!host.endsWith(".github.io")) return "";
+  const owner = host.split(".")[0];
+  const first = location.pathname.split("/").filter(Boolean)[0];
+  return `${owner}/${first || host}`;
+}
+const repoName = () => store.get("radar-gh-repo") || guessRepo();
+function updMsg(text, kind) {
+  const el = document.getElementById("upd-msg");
+  el.className = "msg-line" + (kind ? " " + kind : "");
+  el.innerHTML = text;
+}
+function renderUpdater() {
+  const hasToken = !!store.get("radar-gh-token") && !!repoName();
+  document.getElementById("upd-ready").hidden = !hasToken;
+  document.getElementById("upd-setup").hidden = hasToken;
+  const sp = DATA?.serpapi;
+  document.getElementById("parte-tudo-cost").textContent =
+    sp && sp.searchesLeft != null ? `(gasta 7 das ${sp.searchesLeft} buscas restantes)` : "(gasta 7 buscas)";
+}
+function setupUpdater() {
+  document.getElementById("upd-repo").value = repoName();
+  document.getElementById("upd-save").onclick = () => {
+    const token = document.getElementById("upd-token").value.trim();
+    const repo = document.getElementById("upd-repo").value.trim().replace(/^https?:\/\/github\.com\//, "").replace(/\/$/, "");
+    if (!token || !/^[\w.-]+\/[\w.-]+$/.test(repo)) {
+      updMsg("Preencha o token e o repositório no formato usuario/repositorio.", "err");
+      return;
+    }
+    store.set("radar-gh-token", token);
+    store.set("radar-gh-repo", repo);
+    document.getElementById("upd-token").value = "";
+    updMsg("Token salvo neste aparelho.", "ok");
+    renderUpdater();
+  };
+  document.getElementById("upd-forget").onclick = () => {
+    store.del("radar-gh-token");
+    updMsg("Token removido deste aparelho.");
+    renderUpdater();
+  };
+  document.getElementById("upd-run").onclick = runUpdate;
+}
+async function runUpdate() {
+  const btn = document.getElementById("upd-run");
+  const parte = document.getElementById("parte-tudo").checked ? "tudo" : "milhas";
+  const repo = repoName();
+  const before = DATA?.generatedAt;
+  btn.disabled = true;
+  updMsg("Pedindo ao GitHub para rodar o robô…");
+  try {
+    const r = await fetch(`https://api.github.com/repos/${repo}/actions/workflows/atualizar-dados.yml/dispatches`, {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${store.get("radar-gh-token")}`,
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28"
+      },
+      body: JSON.stringify({ ref: "main", inputs: { parte } })
+    });
+    if (r.status !== 204) {
+      const hint = r.status === 401 ? "O token é inválido ou expirou. Remova e cole um novo."
+        : r.status === 403 || r.status === 404 ? "O token não tem permissão de Actions neste repositório, ou o nome do repositório está errado."
+        : `O GitHub respondeu com erro ${r.status}.`;
+      throw new Error(hint);
+    }
+  } catch (e) {
+    updMsg(esc(e.message || "Não consegui falar com o GitHub. Verifique a conexão."), "err");
+    btn.disabled = false;
+    return;
+  }
+  const actionsUrl = `https://github.com/${repo}/actions`;
+  updMsg(`Robô rodando (${parte === "tudo" ? "milhas e dinheiro" : "só milhas"}). Os dados novos chegam em 2 a 4 minutos e esta página se atualiza sozinha. <a href="${actionsUrl}" target="_blank" rel="noopener">Acompanhar no GitHub ↗</a>`);
+  const started = Date.now();
+  const poll = async () => {
+    try {
+      const fresh = await fetch(`data.json?t=${Date.now()}`, { cache: "no-store" }).then(x => x.json());
+      if (fresh.generatedAt !== before) {
+        applyData(fresh);
+        updMsg(`Dados atualizados em ${fmtDateTime(fresh.generatedAt)}.`, "ok");
+        btn.disabled = false;
+        return;
+      }
+    } catch (e) {}
+    if (Date.now() - started > 8 * 60 * 1000) {
+      updMsg(`Os dados novos ainda não chegaram. Veja se o robô terminou no <a href="${actionsUrl}" target="_blank" rel="noopener">GitHub ↗</a> e recarregue a página.`, "err");
+      btn.disabled = false;
+      return;
+    }
+    setTimeout(poll, 20000);
+  };
+  setTimeout(poll, 30000);
+}
+
+fetch("data.json", { cache: "no-store" })
+  .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+  .then(applyData)
+  .catch(err => {
+    document.getElementById("grid").innerHTML =
+      `<p class="empty">Não consegui carregar o arquivo data.json (${esc(err.message)}). Se você abriu a página direto do computador, rode um servidor local (veja o README) ou acesse pelo endereço do GitHub Pages.</p>`;
+  });
+</script>
+</body>
+</html>

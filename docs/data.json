@@ -1,0 +1,4493 @@
+{
+ "generatedAt": "2026-10-05T01:25:43Z",
+ "config": {
+  "origin": "GRU",
+  "miles": {
+   "windows": {
+    "ida": {
+     "start": "2026-12-10",
+     "end": "2026-12-22"
+    },
+    "volta": {
+     "start": "2027-01-04",
+     "end": "2027-01-10"
+    }
+   }
+  },
+  "roundtrip": {
+   "destination": "BLR",
+   "destinationCity": "Bangalore",
+   "via": [
+    {
+     "code": "DOH",
+     "city": "Doha"
+    },
+    {
+     "code": "FRA",
+     "city": "Frankfurt"
+    }
+   ],
+   "windows": {
+    "ida": {
+     "start": "2026-12-15",
+     "end": "2026-12-21"
+    },
+    "volta": {
+     "start": "2027-01-04",
+     "end": "2027-01-08"
+    }
+   },
+   "dailyFavorites": 4,
+   "dailyRotation": 3,
+   "reference": 10000
+  },
+  "regions": {
+   "me": "Oriente Médio",
+   "eu": "Europa",
+   "af": "África",
+   "as": "Ásia"
+  },
+  "routes": [
+   {
+    "code": "DOH",
+    "city": "Doha",
+    "region": "me",
+    "cash": 4922
+   },
+   {
+    "code": "DXB",
+    "city": "Dubai",
+    "region": "me",
+    "cash": 5100
+   },
+   {
+    "code": "IST",
+    "city": "Istambul",
+    "region": "me",
+    "cash": 4300
+   },
+   {
+    "code": "LHR",
+    "city": "Londres",
+    "region": "eu",
+    "cash": 4100
+   },
+   {
+    "code": "FRA",
+    "city": "Frankfurt",
+    "region": "eu",
+    "cash": 3900
+   },
+   {
+    "code": "LIS",
+    "city": "Lisboa",
+    "region": "eu",
+    "cash": 3300
+   },
+   {
+    "code": "MAD",
+    "city": "Madri",
+    "region": "eu",
+    "cash": 3600
+   },
+   {
+    "code": "CDG",
+    "city": "Paris",
+    "region": "eu",
+    "cash": 3800
+   },
+   {
+    "code": "JNB",
+    "city": "Joanesburgo",
+    "region": "af",
+    "cash": 3400
+   },
+   {
+    "code": "CPT",
+    "city": "Cidade do Cabo",
+    "region": "af",
+    "cash": 3900
+   },
+   {
+    "code": "ADD",
+    "city": "Adis Abeba",
+    "region": "af",
+    "cash": 3700
+   },
+   {
+    "code": "BLR",
+    "city": "Bangalore",
+    "region": "as",
+    "cash": 5800
+   },
+   {
+    "code": "BKK",
+    "city": "Bangkok",
+    "region": "as",
+    "cash": 6300
+   }
+  ],
+  "programs": {
+   "alaska": {
+    "name": "Alaska Atmos",
+    "milheiro": 100
+   },
+   "american": {
+    "name": "American AAdvantage",
+    "milheiro": 95
+   },
+   "qatar": {
+    "name": "Qatar Privilege Club",
+    "milheiro": 80
+   },
+   "emirates": {
+    "name": "Emirates Skywards",
+    "milheiro": 110
+   },
+   "qantas": {
+    "name": "Qantas",
+    "milheiro": 90
+   },
+   "turkish": {
+    "name": "Turkish Miles&Smiles",
+    "milheiro": 70
+   },
+   "aeroplan": {
+    "name": "Aeroplan",
+    "milheiro": 90
+   },
+   "lifemiles": {
+    "name": "LifeMiles",
+    "milheiro": 75
+   },
+   "united": {
+    "name": "United MileagePlus",
+    "milheiro": 100
+   },
+   "azul": {
+    "name": "Azul Fidelidade",
+    "milheiro": 20
+   },
+   "smiles": {
+    "name": "Smiles",
+    "milheiro": 18
+   },
+   "flyingblue": {
+    "name": "Flying Blue",
+    "milheiro": 85
+   },
+   "virginatlantic": {
+    "name": "Virgin Atlantic",
+    "milheiro": 80
+   },
+   "delta": {
+    "name": "Delta SkyMiles",
+    "milheiro": 70
+   },
+   "etihad": {
+    "name": "Etihad Guest",
+    "milheiro": 90
+   },
+   "ethiopian": {
+    "name": "Ethiopian ShebaMiles",
+    "milheiro": 80
+   },
+   "lufthansa": {
+    "name": "Lufthansa Miles&More",
+    "milheiro": 110
+   },
+   "aeromexico": {
+    "name": "Aeromexico Club Premier",
+    "milheiro": 60
+   },
+   "singapore": {
+    "name": "Singapore KrisFlyer",
+    "milheiro": 100
+   },
+   "saudia": {
+    "name": "Saudia AlFursan",
+    "milheiro": 80
+   },
+   "finnair": {
+    "name": "Finnair Plus",
+    "milheiro": 90
+   },
+   "eurobonus": {
+    "name": "SAS EuroBonus",
+    "milheiro": 90
+   },
+   "connectmiles": {
+    "name": "Copa ConnectMiles",
+    "milheiro": 80
+   },
+   "velocity": {
+    "name": "Virgin Australia Velocity",
+    "milheiro": 90
+   },
+   "jetblue": {
+    "name": "JetBlue TrueBlue",
+    "milheiro": 90
+   }
+  },
+  "alerts": {
+   "milesThreshold": 30,
+   "cashThreshold": 20,
+   "businessFactor": 1.5
+  },
+  "fx": 5.4
+ },
+ "serpapi": null,
+ "miles": {
+  "updatedAt": "2026-10-05T01:25:43Z",
+  "sample": true,
+  "ida": {
+   "DOH": [
+    {
+     "date": "2026-12-11",
+     "program": "aeromexico",
+     "econ": {
+      "pts": 48000,
+      "tax": 106,
+      "seats": 1,
+      "airlines": "TK",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T07:25:43Z"
+    },
+    {
+     "date": "2026-12-12",
+     "program": "azul",
+     "econ": {
+      "pts": 131500,
+      "tax": 100,
+      "seats": 7,
+      "airlines": "BA",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T13:25:43Z"
+    },
+    {
+     "date": "2026-12-13",
+     "program": "azul",
+     "econ": {
+      "pts": 133000,
+      "tax": 55,
+      "seats": 8,
+      "airlines": "BA",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T12:25:43Z"
+    },
+    {
+     "date": "2026-12-14",
+     "program": "aeromexico",
+     "econ": {
+      "pts": 48500,
+      "tax": 75,
+      "seats": 8,
+      "airlines": "ET",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": {
+      "pts": 106500,
+      "tax": 249,
+      "seats": 1,
+      "airlines": "ET",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T23:25:43Z"
+    },
+    {
+     "date": "2026-12-14",
+     "program": "azul",
+     "econ": null,
+     "biz": {
+      "pts": 331000,
+      "tax": 187,
+      "seats": 8,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-03T22:25:43Z"
+    },
+    {
+     "date": "2026-12-15",
+     "program": "azul",
+     "econ": {
+      "pts": 168500,
+      "tax": 31,
+      "seats": 5,
+      "airlines": "LH",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T18:25:43Z"
+    },
+    {
+     "date": "2026-12-15",
+     "program": "ethiopian",
+     "econ": null,
+     "biz": {
+      "pts": 89000,
+      "tax": 122,
+      "seats": 6,
+      "airlines": "AF",
+      "stops": 1,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T07:25:43Z"
+    },
+    {
+     "date": "2026-12-16",
+     "program": "aeromexico",
+     "econ": null,
+     "biz": {
+      "pts": 97000,
+      "tax": 278,
+      "seats": 7,
+      "airlines": "EK",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T22:25:43Z"
+    },
+    {
+     "date": "2026-12-17",
+     "program": "azul",
+     "econ": null,
+     "biz": {
+      "pts": 289500,
+      "tax": 64,
+      "seats": 8,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-03T22:25:43Z"
+    },
+    {
+     "date": "2026-12-19",
+     "program": "aeromexico",
+     "econ": {
+      "pts": 48000,
+      "tax": 135,
+      "seats": 3,
+      "airlines": "EK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T01:25:43Z"
+    },
+    {
+     "date": "2026-12-19",
+     "program": "ethiopian",
+     "econ": null,
+     "biz": {
+      "pts": 111000,
+      "tax": 268,
+      "seats": 9,
+      "airlines": "BA",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T11:25:43Z"
+    },
+    {
+     "date": "2026-12-20",
+     "program": "aeromexico",
+     "econ": {
+      "pts": 46000,
+      "tax": 42,
+      "seats": 2,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": {
+      "pts": 101000,
+      "tax": 251,
+      "seats": 3,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-03T19:25:43Z"
+    },
+    {
+     "date": "2026-12-20",
+     "program": "azul",
+     "econ": {
+      "pts": 150500,
+      "tax": 83,
+      "seats": 8,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T16:25:43Z"
+    },
+    {
+     "date": "2026-12-22",
+     "program": "azul",
+     "econ": {
+      "pts": 161500,
+      "tax": 60,
+      "seats": 8,
+      "airlines": "BA",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T23:25:43Z"
+    }
+   ],
+   "DXB": [
+    {
+     "date": "2026-12-10",
+     "program": "alaska",
+     "econ": {
+      "pts": 37500,
+      "tax": 75,
+      "seats": 2,
+      "airlines": "BA",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": {
+      "pts": 82500,
+      "tax": 185,
+      "seats": 9,
+      "airlines": "BA",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T12:25:43Z"
+    },
+    {
+     "date": "2026-12-10",
+     "program": "qantas",
+     "econ": {
+      "pts": 46000,
+      "tax": 94,
+      "seats": 9,
+      "airlines": "EK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T02:25:43Z"
+    },
+    {
+     "date": "2026-12-10",
+     "program": "flyingblue",
+     "econ": {
+      "pts": 39500,
+      "tax": 106,
+      "seats": 2,
+      "airlines": "ET",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T04:25:43Z"
+    },
+    {
+     "date": "2026-12-12",
+     "program": "qantas",
+     "econ": {
+      "pts": 52000,
+      "tax": 78,
+      "seats": 1,
+      "airlines": "ET",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T23:25:43Z"
+    },
+    {
+     "date": "2026-12-13",
+     "program": "qantas",
+     "econ": {
+      "pts": 45000,
+      "tax": 169,
+      "seats": 2,
+      "airlines": "QR",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T20:25:43Z"
+    },
+    {
+     "date": "2026-12-15",
+     "program": "qantas",
+     "econ": null,
+     "biz": {
+      "pts": 120000,
+      "tax": 259,
+      "seats": 3,
+      "airlines": "LH",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T22:25:43Z"
+    },
+    {
+     "date": "2026-12-15",
+     "program": "flyingblue",
+     "econ": {
+      "pts": 49500,
+      "tax": 117,
+      "seats": 4,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T07:25:43Z"
+    },
+    {
+     "date": "2026-12-17",
+     "program": "qantas",
+     "econ": null,
+     "biz": {
+      "pts": 84500,
+      "tax": 79,
+      "seats": 1,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T11:25:43Z"
+    },
+    {
+     "date": "2026-12-18",
+     "program": "alaska",
+     "econ": {
+      "pts": 46000,
+      "tax": 127,
+      "seats": 5,
+      "airlines": "EK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T04:25:43Z"
+    },
+    {
+     "date": "2026-12-18",
+     "program": "flyingblue",
+     "econ": {
+      "pts": 39000,
+      "tax": 197,
+      "seats": 7,
+      "airlines": "AF",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T01:25:43Z"
+    },
+    {
+     "date": "2026-12-20",
+     "program": "alaska",
+     "econ": {
+      "pts": 54000,
+      "tax": 170,
+      "seats": 7,
+      "airlines": "BA",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T16:25:43Z"
+    },
+    {
+     "date": "2026-12-20",
+     "program": "qantas",
+     "econ": {
+      "pts": 38500,
+      "tax": 128,
+      "seats": 8,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T21:25:43Z"
+    },
+    {
+     "date": "2026-12-21",
+     "program": "qantas",
+     "econ": {
+      "pts": 51500,
+      "tax": 134,
+      "seats": 7,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T07:25:43Z"
+    }
+   ],
+   "IST": [
+    {
+     "date": "2026-12-10",
+     "program": "american",
+     "econ": {
+      "pts": 36000,
+      "tax": 109,
+      "seats": 9,
+      "airlines": "QR",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T11:25:43Z"
+    },
+    {
+     "date": "2026-12-11",
+     "program": "aeroplan",
+     "econ": {
+      "pts": 41000,
+      "tax": 179,
+      "seats": 1,
+      "airlines": "LH",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T03:25:43Z"
+    },
+    {
+     "date": "2026-12-12",
+     "program": "aeroplan",
+     "econ": {
+      "pts": 31500,
+      "tax": 180,
+      "seats": 9,
+      "airlines": "QR",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T16:25:43Z"
+    },
+    {
+     "date": "2026-12-14",
+     "program": "american",
+     "econ": {
+      "pts": 33500,
+      "tax": 199,
+      "seats": 4,
+      "airlines": "QR",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T20:25:43Z"
+    },
+    {
+     "date": "2026-12-17",
+     "program": "aeroplan",
+     "econ": {
+      "pts": 43000,
+      "tax": 86,
+      "seats": 1,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T15:25:43Z"
+    },
+    {
+     "date": "2026-12-18",
+     "program": "aeroplan",
+     "econ": {
+      "pts": 38500,
+      "tax": 33,
+      "seats": 7,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T21:25:43Z"
+    },
+    {
+     "date": "2026-12-19",
+     "program": "american",
+     "econ": {
+      "pts": 43500,
+      "tax": 107,
+      "seats": 4,
+      "airlines": "BA",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T21:25:43Z"
+    },
+    {
+     "date": "2026-12-21",
+     "program": "aeroplan",
+     "econ": null,
+     "biz": {
+      "pts": 75000,
+      "tax": 84,
+      "seats": 4,
+      "airlines": "ET",
+      "stops": 1,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T07:25:43Z"
+    },
+    {
+     "date": "2026-12-21",
+     "program": "american",
+     "econ": null,
+     "biz": {
+      "pts": 91500,
+      "tax": 162,
+      "seats": 7,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T23:25:43Z"
+    },
+    {
+     "date": "2026-12-22",
+     "program": "american",
+     "econ": {
+      "pts": 36500,
+      "tax": 62,
+      "seats": 2,
+      "airlines": "QR",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T22:25:43Z"
+    }
+   ],
+   "LHR": [
+    {
+     "date": "2026-12-12",
+     "program": "smiles",
+     "econ": {
+      "pts": 123500,
+      "tax": 70,
+      "seats": 6,
+      "airlines": "EK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T06:25:43Z"
+    },
+    {
+     "date": "2026-12-13",
+     "program": "eurobonus",
+     "econ": null,
+     "biz": {
+      "pts": 84500,
+      "tax": 246,
+      "seats": 8,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T23:25:43Z"
+    },
+    {
+     "date": "2026-12-14",
+     "program": "eurobonus",
+     "econ": {
+      "pts": 31000,
+      "tax": 121,
+      "seats": 8,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T21:25:43Z"
+    },
+    {
+     "date": "2026-12-16",
+     "program": "eurobonus",
+     "econ": {
+      "pts": 38000,
+      "tax": 164,
+      "seats": 6,
+      "airlines": "ET",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T20:25:43Z"
+    },
+    {
+     "date": "2026-12-16",
+     "program": "velocity",
+     "econ": null,
+     "biz": {
+      "pts": 71500,
+      "tax": 185,
+      "seats": 8,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T07:25:43Z"
+    },
+    {
+     "date": "2026-12-16",
+     "program": "smiles",
+     "econ": {
+      "pts": 95000,
+      "tax": 32,
+      "seats": 2,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T22:25:43Z"
+    },
+    {
+     "date": "2026-12-18",
+     "program": "velocity",
+     "econ": {
+      "pts": 37000,
+      "tax": 128,
+      "seats": 6,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": {
+      "pts": 81500,
+      "tax": 127,
+      "seats": 5,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T23:25:43Z"
+    },
+    {
+     "date": "2026-12-19",
+     "program": "velocity",
+     "econ": {
+      "pts": 32000,
+      "tax": 123,
+      "seats": 3,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T13:25:43Z"
+    }
+   ],
+   "FRA": [
+    {
+     "date": "2026-12-10",
+     "program": "aeroplan",
+     "econ": null,
+     "biz": {
+      "pts": 62500,
+      "tax": 66,
+      "seats": 2,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-03T20:25:43Z"
+    },
+    {
+     "date": "2026-12-12",
+     "program": "finnair",
+     "econ": {
+      "pts": 40500,
+      "tax": 170,
+      "seats": 8,
+      "airlines": "AF",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T23:25:43Z"
+    },
+    {
+     "date": "2026-12-13",
+     "program": "finnair",
+     "econ": {
+      "pts": 41500,
+      "tax": 45,
+      "seats": 3,
+      "airlines": "ET",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T09:25:43Z"
+    },
+    {
+     "date": "2026-12-15",
+     "program": "finnair",
+     "econ": {
+      "pts": 35500,
+      "tax": 171,
+      "seats": 2,
+      "airlines": "ET",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": {
+      "pts": 78000,
+      "tax": 210,
+      "seats": 9,
+      "airlines": "ET",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T19:25:43Z"
+    },
+    {
+     "date": "2026-12-15",
+     "program": "lifemiles",
+     "econ": null,
+     "biz": {
+      "pts": 70500,
+      "tax": 241,
+      "seats": 4,
+      "airlines": "LH",
+      "stops": 1,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T19:25:43Z"
+    },
+    {
+     "date": "2026-12-18",
+     "program": "lifemiles",
+     "econ": null,
+     "biz": {
+      "pts": 77000,
+      "tax": 168,
+      "seats": 5,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-05T00:25:43Z"
+    },
+    {
+     "date": "2026-12-19",
+     "program": "lifemiles",
+     "econ": {
+      "pts": 35500,
+      "tax": 140,
+      "seats": 1,
+      "airlines": "BA",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T10:25:43Z"
+    },
+    {
+     "date": "2026-12-20",
+     "program": "finnair",
+     "econ": {
+      "pts": 31500,
+      "tax": 57,
+      "seats": 8,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": {
+      "pts": 69500,
+      "tax": 288,
+      "seats": 2,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T09:25:43Z"
+    },
+    {
+     "date": "2026-12-21",
+     "program": "finnair",
+     "econ": {
+      "pts": 41500,
+      "tax": 58,
+      "seats": 3,
+      "airlines": "BA",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T19:25:43Z"
+    },
+    {
+     "date": "2026-12-21",
+     "program": "lifemiles",
+     "econ": {
+      "pts": 35000,
+      "tax": 155,
+      "seats": 2,
+      "airlines": "QR",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T03:25:43Z"
+    },
+    {
+     "date": "2026-12-22",
+     "program": "aeroplan",
+     "econ": {
+      "pts": 33000,
+      "tax": 165,
+      "seats": 8,
+      "airlines": "QR",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T18:25:43Z"
+    },
+    {
+     "date": "2026-12-22",
+     "program": "lifemiles",
+     "econ": null,
+     "biz": {
+      "pts": 62500,
+      "tax": 256,
+      "seats": 6,
+      "airlines": "QR",
+      "stops": 1,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T06:25:43Z"
+    }
+   ],
+   "LIS": [
+    {
+     "date": "2026-12-10",
+     "program": "aeroplan",
+     "econ": {
+      "pts": 35500,
+      "tax": 80,
+      "seats": 7,
+      "airlines": "AF",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T07:25:43Z"
+    },
+    {
+     "date": "2026-12-11",
+     "program": "smiles",
+     "econ": {
+      "pts": 102500,
+      "tax": 85,
+      "seats": 1,
+      "airlines": "BA",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T23:25:43Z"
+    },
+    {
+     "date": "2026-12-13",
+     "program": "smiles",
+     "econ": {
+      "pts": 79000,
+      "tax": 64,
+      "seats": 2,
+      "airlines": "EK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T06:25:43Z"
+    },
+    {
+     "date": "2026-12-14",
+     "program": "smiles",
+     "econ": {
+      "pts": 93000,
+      "tax": 119,
+      "seats": 7,
+      "airlines": "AF",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T13:25:43Z"
+    },
+    {
+     "date": "2026-12-15",
+     "program": "smiles",
+     "econ": {
+      "pts": 81000,
+      "tax": 179,
+      "seats": 8,
+      "airlines": "EK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T13:25:43Z"
+    },
+    {
+     "date": "2026-12-16",
+     "program": "aeroplan",
+     "econ": {
+      "pts": 32000,
+      "tax": 173,
+      "seats": 4,
+      "airlines": "TK",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T03:25:43Z"
+    },
+    {
+     "date": "2026-12-17",
+     "program": "smiles",
+     "econ": {
+      "pts": 79000,
+      "tax": 162,
+      "seats": 2,
+      "airlines": "QR",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T02:25:43Z"
+    },
+    {
+     "date": "2026-12-17",
+     "program": "aeroplan",
+     "econ": null,
+     "biz": {
+      "pts": 59500,
+      "tax": 223,
+      "seats": 7,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-03T21:25:43Z"
+    },
+    {
+     "date": "2026-12-18",
+     "program": "smiles",
+     "econ": {
+      "pts": 99000,
+      "tax": 101,
+      "seats": 7,
+      "airlines": "BA",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T02:25:43Z"
+    },
+    {
+     "date": "2026-12-20",
+     "program": "smiles",
+     "econ": {
+      "pts": 92000,
+      "tax": 51,
+      "seats": 5,
+      "airlines": "ET",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T04:25:43Z"
+    }
+   ],
+   "MAD": [
+    {
+     "date": "2026-12-11",
+     "program": "virginatlantic",
+     "econ": {
+      "pts": 34000,
+      "tax": 31,
+      "seats": 7,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T21:25:43Z"
+    },
+    {
+     "date": "2026-12-11",
+     "program": "alaska",
+     "econ": null,
+     "biz": {
+      "pts": 64000,
+      "tax": 295,
+      "seats": 9,
+      "airlines": "QR",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T13:25:43Z"
+    },
+    {
+     "date": "2026-12-12",
+     "program": "singapore",
+     "econ": null,
+     "biz": {
+      "pts": 73500,
+      "tax": 197,
+      "seats": 8,
+      "airlines": "LH",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-03T19:25:43Z"
+    },
+    {
+     "date": "2026-12-13",
+     "program": "alaska",
+     "econ": null,
+     "biz": {
+      "pts": 57000,
+      "tax": 266,
+      "seats": 3,
+      "airlines": "LH",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T12:25:43Z"
+    },
+    {
+     "date": "2026-12-14",
+     "program": "virginatlantic",
+     "econ": {
+      "pts": 35000,
+      "tax": 63,
+      "seats": 6,
+      "airlines": "QR",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T19:25:43Z"
+    },
+    {
+     "date": "2026-12-15",
+     "program": "singapore",
+     "econ": {
+      "pts": 26000,
+      "tax": 181,
+      "seats": 1,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T18:25:43Z"
+    },
+    {
+     "date": "2026-12-17",
+     "program": "virginatlantic",
+     "econ": {
+      "pts": 26000,
+      "tax": 189,
+      "seats": 3,
+      "airlines": "QR",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T17:25:43Z"
+    },
+    {
+     "date": "2026-12-18",
+     "program": "virginatlantic",
+     "econ": {
+      "pts": 33500,
+      "tax": 142,
+      "seats": 5,
+      "airlines": "TP",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T02:25:43Z"
+    },
+    {
+     "date": "2026-12-18",
+     "program": "alaska",
+     "econ": {
+      "pts": 32500,
+      "tax": 195,
+      "seats": 1,
+      "airlines": "LH",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T10:25:43Z"
+    },
+    {
+     "date": "2026-12-21",
+     "program": "alaska",
+     "econ": null,
+     "biz": {
+      "pts": 64000,
+      "tax": 216,
+      "seats": 3,
+      "airlines": "BA",
+      "stops": 1,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T05:25:43Z"
+    },
+    {
+     "date": "2026-12-22",
+     "program": "virginatlantic",
+     "econ": {
+      "pts": 32000,
+      "tax": 185,
+      "seats": 8,
+      "airlines": "QR",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T00:25:43Z"
+    }
+   ],
+   "CDG": [
+    {
+     "date": "2026-12-11",
+     "program": "flyingblue",
+     "econ": {
+      "pts": 28500,
+      "tax": 53,
+      "seats": 7,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T08:25:43Z"
+    },
+    {
+     "date": "2026-12-12",
+     "program": "alaska",
+     "econ": {
+      "pts": 30500,
+      "tax": 158,
+      "seats": 3,
+      "airlines": "EK",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T20:25:43Z"
+    },
+    {
+     "date": "2026-12-13",
+     "program": "alaska",
+     "econ": {
+      "pts": 36500,
+      "tax": 195,
+      "seats": 8,
+      "airlines": "ET",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T14:25:43Z"
+    },
+    {
+     "date": "2026-12-14",
+     "program": "alaska",
+     "econ": null,
+     "biz": {
+      "pts": 68000,
+      "tax": 170,
+      "seats": 2,
+      "airlines": "BA",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T00:25:43Z"
+    },
+    {
+     "date": "2026-12-16",
+     "program": "jetblue",
+     "econ": {
+      "pts": 29500,
+      "tax": 115,
+      "seats": 5,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T19:25:43Z"
+    },
+    {
+     "date": "2026-12-17",
+     "program": "alaska",
+     "econ": null,
+     "biz": {
+      "pts": 71500,
+      "tax": 152,
+      "seats": 5,
+      "airlines": "QR",
+      "stops": 1,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T13:25:43Z"
+    },
+    {
+     "date": "2026-12-17",
+     "program": "flyingblue",
+     "econ": {
+      "pts": 30500,
+      "tax": 85,
+      "seats": 1,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T20:25:43Z"
+    },
+    {
+     "date": "2026-12-19",
+     "program": "flyingblue",
+     "econ": {
+      "pts": 32000,
+      "tax": 193,
+      "seats": 9,
+      "airlines": "LH",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T23:25:43Z"
+    },
+    {
+     "date": "2026-12-20",
+     "program": "alaska",
+     "econ": {
+      "pts": 29500,
+      "tax": 35,
+      "seats": 5,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T18:25:43Z"
+    },
+    {
+     "date": "2026-12-21",
+     "program": "alaska",
+     "econ": {
+      "pts": 37500,
+      "tax": 124,
+      "seats": 4,
+      "airlines": "AF",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T22:25:43Z"
+    },
+    {
+     "date": "2026-12-21",
+     "program": "flyingblue",
+     "econ": null,
+     "biz": {
+      "pts": 62500,
+      "tax": 252,
+      "seats": 9,
+      "airlines": "QR",
+      "stops": 1,
+      "flights": null
+     },
+     "seenAt": "2026-10-05T00:25:43Z"
+    }
+   ],
+   "JNB": [
+    {
+     "date": "2026-12-11",
+     "program": "aeromexico",
+     "econ": {
+      "pts": 30500,
+      "tax": 89,
+      "seats": 5,
+      "airlines": "EK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T10:25:43Z"
+    },
+    {
+     "date": "2026-12-13",
+     "program": "aeromexico",
+     "econ": {
+      "pts": 26000,
+      "tax": 192,
+      "seats": 4,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": {
+      "pts": 57000,
+      "tax": 289,
+      "seats": 6,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T17:25:43Z"
+    },
+    {
+     "date": "2026-12-13",
+     "program": "turkish",
+     "econ": null,
+     "biz": {
+      "pts": 78000,
+      "tax": 119,
+      "seats": 5,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T19:25:43Z"
+    },
+    {
+     "date": "2026-12-15",
+     "program": "aeromexico",
+     "econ": {
+      "pts": 31000,
+      "tax": 127,
+      "seats": 9,
+      "airlines": "ET",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T21:25:43Z"
+    },
+    {
+     "date": "2026-12-15",
+     "program": "emirates",
+     "econ": null,
+     "biz": {
+      "pts": 62500,
+      "tax": 75,
+      "seats": 1,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T14:25:43Z"
+    },
+    {
+     "date": "2026-12-16",
+     "program": "aeromexico",
+     "econ": {
+      "pts": 36500,
+      "tax": 119,
+      "seats": 6,
+      "airlines": "BA",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T06:25:43Z"
+    },
+    {
+     "date": "2026-12-16",
+     "program": "turkish",
+     "econ": {
+      "pts": 29000,
+      "tax": 198,
+      "seats": 2,
+      "airlines": "AF",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T19:25:43Z"
+    },
+    {
+     "date": "2026-12-19",
+     "program": "aeromexico",
+     "econ": {
+      "pts": 26000,
+      "tax": 134,
+      "seats": 8,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T06:25:43Z"
+    },
+    {
+     "date": "2026-12-20",
+     "program": "turkish",
+     "econ": null,
+     "biz": {
+      "pts": 69500,
+      "tax": 118,
+      "seats": 5,
+      "airlines": "QR",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T19:25:43Z"
+    },
+    {
+     "date": "2026-12-21",
+     "program": "aeromexico",
+     "econ": {
+      "pts": 36000,
+      "tax": 125,
+      "seats": 7,
+      "airlines": "BA",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T02:25:43Z"
+    }
+   ],
+   "CPT": [
+    {
+     "date": "2026-12-11",
+     "program": "singapore",
+     "econ": {
+      "pts": 39500,
+      "tax": 43,
+      "seats": 7,
+      "airlines": "AF",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T19:25:43Z"
+    },
+    {
+     "date": "2026-12-12",
+     "program": "finnair",
+     "econ": null,
+     "biz": {
+      "pts": 69500,
+      "tax": 292,
+      "seats": 5,
+      "airlines": "LH",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T02:25:43Z"
+    },
+    {
+     "date": "2026-12-13",
+     "program": "united",
+     "econ": {
+      "pts": 38000,
+      "tax": 148,
+      "seats": 6,
+      "airlines": "TP",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T04:25:43Z"
+    },
+    {
+     "date": "2026-12-14",
+     "program": "finnair",
+     "econ": {
+      "pts": 40000,
+      "tax": 68,
+      "seats": 2,
+      "airlines": "EK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T04:25:43Z"
+    },
+    {
+     "date": "2026-12-14",
+     "program": "united",
+     "econ": {
+      "pts": 32500,
+      "tax": 140,
+      "seats": 7,
+      "airlines": "QR",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T06:25:43Z"
+    },
+    {
+     "date": "2026-12-16",
+     "program": "finnair",
+     "econ": null,
+     "biz": {
+      "pts": 71500,
+      "tax": 249,
+      "seats": 8,
+      "airlines": "AF",
+      "stops": 1,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T09:25:43Z"
+    },
+    {
+     "date": "2026-12-18",
+     "program": "finnair",
+     "econ": {
+      "pts": 41500,
+      "tax": 143,
+      "seats": 4,
+      "airlines": "BA",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T00:25:43Z"
+    },
+    {
+     "date": "2026-12-19",
+     "program": "singapore",
+     "econ": {
+      "pts": 38500,
+      "tax": 136,
+      "seats": 2,
+      "airlines": "LH",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T15:25:43Z"
+    },
+    {
+     "date": "2026-12-20",
+     "program": "singapore",
+     "econ": {
+      "pts": 38500,
+      "tax": 190,
+      "seats": 8,
+      "airlines": "BA",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": {
+      "pts": 84500,
+      "tax": 239,
+      "seats": 2,
+      "airlines": "BA",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T00:25:43Z"
+    },
+    {
+     "date": "2026-12-22",
+     "program": "singapore",
+     "econ": {
+      "pts": 37000,
+      "tax": 158,
+      "seats": 4,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T23:25:43Z"
+    },
+    {
+     "date": "2026-12-22",
+     "program": "finnair",
+     "econ": {
+      "pts": 37500,
+      "tax": 62,
+      "seats": 9,
+      "airlines": "QR",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T14:25:43Z"
+    }
+   ],
+   "ADD": [
+    {
+     "date": "2026-12-11",
+     "program": "turkish",
+     "econ": {
+      "pts": 39000,
+      "tax": 196,
+      "seats": 1,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T01:25:43Z"
+    },
+    {
+     "date": "2026-12-11",
+     "program": "lufthansa",
+     "econ": null,
+     "biz": {
+      "pts": 69500,
+      "tax": 203,
+      "seats": 7,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T10:25:43Z"
+    },
+    {
+     "date": "2026-12-12",
+     "program": "turkish",
+     "econ": {
+      "pts": 30000,
+      "tax": 68,
+      "seats": 5,
+      "airlines": "LH",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T20:25:43Z"
+    },
+    {
+     "date": "2026-12-13",
+     "program": "lufthansa",
+     "econ": {
+      "pts": 27500,
+      "tax": 129,
+      "seats": 3,
+      "airlines": "EK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T21:25:43Z"
+    },
+    {
+     "date": "2026-12-15",
+     "program": "lufthansa",
+     "econ": null,
+     "biz": {
+      "pts": 82500,
+      "tax": 286,
+      "seats": 6,
+      "airlines": "QR",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T13:25:43Z"
+    },
+    {
+     "date": "2026-12-16",
+     "program": "turkish",
+     "econ": null,
+     "biz": {
+      "pts": 80500,
+      "tax": 218,
+      "seats": 5,
+      "airlines": "BA",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T09:25:43Z"
+    },
+    {
+     "date": "2026-12-16",
+     "program": "finnair",
+     "econ": {
+      "pts": 34500,
+      "tax": 53,
+      "seats": 8,
+      "airlines": "BA",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": {
+      "pts": 76000,
+      "tax": 76,
+      "seats": 6,
+      "airlines": "BA",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T06:25:43Z"
+    },
+    {
+     "date": "2026-12-18",
+     "program": "turkish",
+     "econ": {
+      "pts": 28500,
+      "tax": 142,
+      "seats": 9,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T23:25:43Z"
+    },
+    {
+     "date": "2026-12-19",
+     "program": "finnair",
+     "econ": {
+      "pts": 28000,
+      "tax": 186,
+      "seats": 1,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T23:25:43Z"
+    },
+    {
+     "date": "2026-12-20",
+     "program": "lufthansa",
+     "econ": null,
+     "biz": {
+      "pts": 60500,
+      "tax": 289,
+      "seats": 9,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T18:25:43Z"
+    },
+    {
+     "date": "2026-12-21",
+     "program": "turkish",
+     "econ": {
+      "pts": 35000,
+      "tax": 157,
+      "seats": 5,
+      "airlines": "QR",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T17:25:43Z"
+    },
+    {
+     "date": "2026-12-22",
+     "program": "turkish",
+     "econ": {
+      "pts": 36000,
+      "tax": 184,
+      "seats": 7,
+      "airlines": "EK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T19:25:43Z"
+    }
+   ],
+   "BLR": [
+    {
+     "date": "2026-12-11",
+     "program": "finnair",
+     "econ": {
+      "pts": 51000,
+      "tax": 70,
+      "seats": 1,
+      "airlines": "LH",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T18:25:43Z"
+    },
+    {
+     "date": "2026-12-12",
+     "program": "finnair",
+     "econ": null,
+     "biz": {
+      "pts": 114500,
+      "tax": 248,
+      "seats": 3,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T11:25:43Z"
+    },
+    {
+     "date": "2026-12-12",
+     "program": "alaska",
+     "econ": null,
+     "biz": {
+      "pts": 102500,
+      "tax": 70,
+      "seats": 2,
+      "airlines": "EK",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T16:25:43Z"
+    },
+    {
+     "date": "2026-12-14",
+     "program": "finnair",
+     "econ": {
+      "pts": 59000,
+      "tax": 63,
+      "seats": 9,
+      "airlines": "LH",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T19:25:43Z"
+    },
+    {
+     "date": "2026-12-14",
+     "program": "alaska",
+     "econ": {
+      "pts": 59500,
+      "tax": 52,
+      "seats": 4,
+      "airlines": "LH",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T03:25:43Z"
+    },
+    {
+     "date": "2026-12-16",
+     "program": "finnair",
+     "econ": {
+      "pts": 62500,
+      "tax": 74,
+      "seats": 8,
+      "airlines": "TK",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T19:25:43Z"
+    },
+    {
+     "date": "2026-12-17",
+     "program": "finnair",
+     "econ": {
+      "pts": 48500,
+      "tax": 185,
+      "seats": 7,
+      "airlines": "ET",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T07:25:43Z"
+    },
+    {
+     "date": "2026-12-18",
+     "program": "finnair",
+     "econ": {
+      "pts": 57000,
+      "tax": 86,
+      "seats": 2,
+      "airlines": "TK",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T19:25:43Z"
+    },
+    {
+     "date": "2026-12-18",
+     "program": "alaska",
+     "econ": {
+      "pts": 51500,
+      "tax": 162,
+      "seats": 3,
+      "airlines": "BA",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T02:25:43Z"
+    },
+    {
+     "date": "2026-12-19",
+     "program": "finnair",
+     "econ": null,
+     "biz": {
+      "pts": 120000,
+      "tax": 196,
+      "seats": 9,
+      "airlines": "ET",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T06:25:43Z"
+    },
+    {
+     "date": "2026-12-19",
+     "program": "alaska",
+     "econ": {
+      "pts": 56000,
+      "tax": 156,
+      "seats": 1,
+      "airlines": "LH",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T19:25:43Z"
+    },
+    {
+     "date": "2026-12-19",
+     "program": "azul",
+     "econ": null,
+     "biz": {
+      "pts": 416000,
+      "tax": 222,
+      "seats": 9,
+      "airlines": "EK",
+      "stops": 1,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T02:25:43Z"
+    },
+    {
+     "date": "2026-12-20",
+     "program": "finnair",
+     "econ": null,
+     "biz": {
+      "pts": 128500,
+      "tax": 242,
+      "seats": 6,
+      "airlines": "LH",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T06:25:43Z"
+    },
+    {
+     "date": "2026-12-20",
+     "program": "azul",
+     "econ": null,
+     "biz": {
+      "pts": 412500,
+      "tax": 280,
+      "seats": 2,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T09:25:43Z"
+    },
+    {
+     "date": "2026-12-21",
+     "program": "azul",
+     "econ": null,
+     "biz": {
+      "pts": 423500,
+      "tax": 278,
+      "seats": 7,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T04:25:43Z"
+    },
+    {
+     "date": "2026-12-22",
+     "program": "finnair",
+     "econ": {
+      "pts": 59000,
+      "tax": 82,
+      "seats": 2,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T23:25:43Z"
+    }
+   ],
+   "BKK": [
+    {
+     "date": "2026-12-11",
+     "program": "united",
+     "econ": {
+      "pts": 48500,
+      "tax": 47,
+      "seats": 5,
+      "airlines": "BA",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T12:25:43Z"
+    },
+    {
+     "date": "2026-12-12",
+     "program": "flyingblue",
+     "econ": null,
+     "biz": {
+      "pts": 126500,
+      "tax": 290,
+      "seats": 7,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-03T20:25:43Z"
+    },
+    {
+     "date": "2026-12-12",
+     "program": "united",
+     "econ": {
+      "pts": 60500,
+      "tax": 69,
+      "seats": 8,
+      "airlines": "ET",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T22:25:43Z"
+    },
+    {
+     "date": "2026-12-14",
+     "program": "flyingblue",
+     "econ": {
+      "pts": 63000,
+      "tax": 63,
+      "seats": 2,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": {
+      "pts": 138500,
+      "tax": 115,
+      "seats": 7,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T18:25:43Z"
+    },
+    {
+     "date": "2026-12-14",
+     "program": "saudia",
+     "econ": null,
+     "biz": {
+      "pts": 148500,
+      "tax": 140,
+      "seats": 2,
+      "airlines": "QR",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T14:25:43Z"
+    },
+    {
+     "date": "2026-12-16",
+     "program": "saudia",
+     "econ": {
+      "pts": 50000,
+      "tax": 56,
+      "seats": 7,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T08:25:43Z"
+    },
+    {
+     "date": "2026-12-16",
+     "program": "united",
+     "econ": {
+      "pts": 54000,
+      "tax": 46,
+      "seats": 2,
+      "airlines": "ET",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T12:25:43Z"
+    },
+    {
+     "date": "2026-12-20",
+     "program": "flyingblue",
+     "econ": null,
+     "biz": {
+      "pts": 105500,
+      "tax": 280,
+      "seats": 5,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T22:25:43Z"
+    },
+    {
+     "date": "2026-12-20",
+     "program": "saudia",
+     "econ": null,
+     "biz": {
+      "pts": 128500,
+      "tax": 216,
+      "seats": 7,
+      "airlines": "BA",
+      "stops": 1,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T14:25:43Z"
+    },
+    {
+     "date": "2026-12-20",
+     "program": "united",
+     "econ": {
+      "pts": 64000,
+      "tax": 149,
+      "seats": 6,
+      "airlines": "BA",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T06:25:43Z"
+    },
+    {
+     "date": "2026-12-21",
+     "program": "flyingblue",
+     "econ": null,
+     "biz": {
+      "pts": 123000,
+      "tax": 77,
+      "seats": 2,
+      "airlines": "AF",
+      "stops": 1,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T20:25:43Z"
+    },
+    {
+     "date": "2026-12-21",
+     "program": "saudia",
+     "econ": {
+      "pts": 68000,
+      "tax": 46,
+      "seats": 8,
+      "airlines": "LH",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T13:25:43Z"
+    },
+    {
+     "date": "2026-12-21",
+     "program": "united",
+     "econ": {
+      "pts": 45500,
+      "tax": 170,
+      "seats": 5,
+      "airlines": "QR",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T18:25:43Z"
+    },
+    {
+     "date": "2026-12-22",
+     "program": "saudia",
+     "econ": {
+      "pts": 50500,
+      "tax": 186,
+      "seats": 1,
+      "airlines": "AF",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": {
+      "pts": 111000,
+      "tax": 171,
+      "seats": 8,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T08:25:43Z"
+    }
+   ]
+  },
+  "volta": {
+   "DOH": [
+    {
+     "date": "2027-01-05",
+     "program": "flyingblue",
+     "econ": {
+      "pts": 36000,
+      "tax": 136,
+      "seats": 3,
+      "airlines": "LH",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T09:25:43Z"
+    },
+    {
+     "date": "2027-01-07",
+     "program": "aeromexico",
+     "econ": {
+      "pts": 42500,
+      "tax": 87,
+      "seats": 7,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T11:25:43Z"
+    },
+    {
+     "date": "2027-01-07",
+     "program": "flyingblue",
+     "econ": {
+      "pts": 42000,
+      "tax": 94,
+      "seats": 7,
+      "airlines": "ET",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T09:25:43Z"
+    },
+    {
+     "date": "2027-01-09",
+     "program": "velocity",
+     "econ": null,
+     "biz": {
+      "pts": 111000,
+      "tax": 238,
+      "seats": 6,
+      "airlines": "ET",
+      "stops": 1,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T15:25:43Z"
+    },
+    {
+     "date": "2027-01-10",
+     "program": "flyingblue",
+     "econ": {
+      "pts": 35500,
+      "tax": 166,
+      "seats": 2,
+      "airlines": "LH",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T07:25:43Z"
+    }
+   ],
+   "DXB": [
+    {
+     "date": "2027-01-04",
+     "program": "delta",
+     "econ": {
+      "pts": 50500,
+      "tax": 66,
+      "seats": 9,
+      "airlines": "QR",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T18:25:43Z"
+    },
+    {
+     "date": "2027-01-04",
+     "program": "qantas",
+     "econ": {
+      "pts": 44500,
+      "tax": 198,
+      "seats": 7,
+      "airlines": "QR",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": {
+      "pts": 98000,
+      "tax": 75,
+      "seats": 9,
+      "airlines": "QR",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T11:25:43Z"
+    },
+    {
+     "date": "2027-01-05",
+     "program": "qantas",
+     "econ": {
+      "pts": 43500,
+      "tax": 54,
+      "seats": 4,
+      "airlines": "ET",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T21:25:43Z"
+    },
+    {
+     "date": "2027-01-07",
+     "program": "qantas",
+     "econ": {
+      "pts": 44500,
+      "tax": 48,
+      "seats": 2,
+      "airlines": "AF",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": {
+      "pts": 98000,
+      "tax": 183,
+      "seats": 3,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T14:25:43Z"
+    },
+    {
+     "date": "2027-01-08",
+     "program": "qantas",
+     "econ": {
+      "pts": 37000,
+      "tax": 198,
+      "seats": 3,
+      "airlines": "QR",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T20:25:43Z"
+    }
+   ],
+   "IST": [
+    {
+     "date": "2027-01-05",
+     "program": "qatar",
+     "econ": null,
+     "biz": {
+      "pts": 71500,
+      "tax": 80,
+      "seats": 5,
+      "airlines": "TK",
+      "stops": 1,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T18:25:43Z"
+    },
+    {
+     "date": "2027-01-07",
+     "program": "lifemiles",
+     "econ": {
+      "pts": 38500,
+      "tax": 111,
+      "seats": 7,
+      "airlines": "EK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": {
+      "pts": 84500,
+      "tax": 102,
+      "seats": 7,
+      "airlines": "EK",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T09:25:43Z"
+    },
+    {
+     "date": "2027-01-07",
+     "program": "lufthansa",
+     "econ": null,
+     "biz": {
+      "pts": 68000,
+      "tax": 83,
+      "seats": 5,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T12:25:43Z"
+    },
+    {
+     "date": "2027-01-08",
+     "program": "lifemiles",
+     "econ": {
+      "pts": 32500,
+      "tax": 113,
+      "seats": 8,
+      "airlines": "QR",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T12:25:43Z"
+    },
+    {
+     "date": "2027-01-09",
+     "program": "lifemiles",
+     "econ": {
+      "pts": 35500,
+      "tax": 191,
+      "seats": 7,
+      "airlines": "TK",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T07:25:43Z"
+    },
+    {
+     "date": "2027-01-09",
+     "program": "lufthansa",
+     "econ": null,
+     "biz": {
+      "pts": 91500,
+      "tax": 234,
+      "seats": 6,
+      "airlines": "TP",
+      "stops": 1,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T00:25:43Z"
+    },
+    {
+     "date": "2027-01-10",
+     "program": "lifemiles",
+     "econ": {
+      "pts": 43000,
+      "tax": 117,
+      "seats": 8,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T22:25:43Z"
+    }
+   ],
+   "LHR": [
+    {
+     "date": "2027-01-05",
+     "program": "finnair",
+     "econ": {
+      "pts": 31500,
+      "tax": 131,
+      "seats": 4,
+      "airlines": "BA",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T18:25:43Z"
+    },
+    {
+     "date": "2027-01-06",
+     "program": "finnair",
+     "econ": {
+      "pts": 43000,
+      "tax": 58,
+      "seats": 4,
+      "airlines": "BA",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-05T00:25:43Z"
+    },
+    {
+     "date": "2027-01-08",
+     "program": "finnair",
+     "econ": {
+      "pts": 38000,
+      "tax": 32,
+      "seats": 9,
+      "airlines": "ET",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": {
+      "pts": 83500,
+      "tax": 125,
+      "seats": 9,
+      "airlines": "ET",
+      "stops": 1,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T02:25:43Z"
+    },
+    {
+     "date": "2027-01-09",
+     "program": "eurobonus",
+     "econ": null,
+     "biz": {
+      "pts": 86000,
+      "tax": 281,
+      "seats": 8,
+      "airlines": "BA",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T05:25:43Z"
+    }
+   ],
+   "FRA": [
+    {
+     "date": "2027-01-05",
+     "program": "alaska",
+     "econ": {
+      "pts": 34500,
+      "tax": 138,
+      "seats": 3,
+      "airlines": "QR",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T23:25:43Z"
+    },
+    {
+     "date": "2027-01-06",
+     "program": "singapore",
+     "econ": {
+      "pts": 36500,
+      "tax": 38,
+      "seats": 9,
+      "airlines": "BA",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T02:25:43Z"
+    },
+    {
+     "date": "2027-01-06",
+     "program": "alaska",
+     "econ": null,
+     "biz": {
+      "pts": 64000,
+      "tax": 205,
+      "seats": 9,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T16:25:43Z"
+    },
+    {
+     "date": "2027-01-06",
+     "program": "delta",
+     "econ": {
+      "pts": 30000,
+      "tax": 191,
+      "seats": 8,
+      "airlines": "LH",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T22:25:43Z"
+    },
+    {
+     "date": "2027-01-07",
+     "program": "alaska",
+     "econ": {
+      "pts": 31000,
+      "tax": 63,
+      "seats": 9,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T15:25:43Z"
+    },
+    {
+     "date": "2027-01-08",
+     "program": "delta",
+     "econ": {
+      "pts": 42000,
+      "tax": 41,
+      "seats": 6,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T19:25:43Z"
+    },
+    {
+     "date": "2027-01-09",
+     "program": "singapore",
+     "econ": {
+      "pts": 31000,
+      "tax": 31,
+      "seats": 1,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T21:25:43Z"
+    }
+   ],
+   "LIS": [
+    {
+     "date": "2027-01-05",
+     "program": "aeroplan",
+     "econ": {
+      "pts": 28500,
+      "tax": 154,
+      "seats": 2,
+      "airlines": "LH",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T20:25:43Z"
+    },
+    {
+     "date": "2027-01-06",
+     "program": "turkish",
+     "econ": null,
+     "biz": {
+      "pts": 55000,
+      "tax": 176,
+      "seats": 5,
+      "airlines": "QR",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T04:25:43Z"
+    },
+    {
+     "date": "2027-01-06",
+     "program": "azul",
+     "econ": {
+      "pts": 87000,
+      "tax": 87,
+      "seats": 9,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T21:25:43Z"
+    },
+    {
+     "date": "2027-01-07",
+     "program": "azul",
+     "econ": {
+      "pts": 85000,
+      "tax": 31,
+      "seats": 7,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": {
+      "pts": 187000,
+      "tax": 286,
+      "seats": 4,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-03T19:25:43Z"
+    },
+    {
+     "date": "2027-01-08",
+     "program": "turkish",
+     "econ": {
+      "pts": 28000,
+      "tax": 50,
+      "seats": 9,
+      "airlines": "LH",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T07:25:43Z"
+    },
+    {
+     "date": "2027-01-08",
+     "program": "azul",
+     "econ": {
+      "pts": 77000,
+      "tax": 189,
+      "seats": 2,
+      "airlines": "EK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T23:25:43Z"
+    },
+    {
+     "date": "2027-01-09",
+     "program": "aeroplan",
+     "econ": {
+      "pts": 24500,
+      "tax": 159,
+      "seats": 8,
+      "airlines": "ET",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T12:25:43Z"
+    },
+    {
+     "date": "2027-01-10",
+     "program": "aeroplan",
+     "econ": {
+      "pts": 31500,
+      "tax": 83,
+      "seats": 4,
+      "airlines": "QR",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T13:25:43Z"
+    }
+   ],
+   "MAD": [
+    {
+     "date": "2027-01-04",
+     "program": "alaska",
+     "econ": {
+      "pts": 29500,
+      "tax": 64,
+      "seats": 9,
+      "airlines": "EK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T20:25:43Z"
+    },
+    {
+     "date": "2027-01-04",
+     "program": "eurobonus",
+     "econ": null,
+     "biz": {
+      "pts": 66000,
+      "tax": 218,
+      "seats": 1,
+      "airlines": "LH",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T20:25:43Z"
+    },
+    {
+     "date": "2027-01-06",
+     "program": "lifemiles",
+     "econ": null,
+     "biz": {
+      "pts": 60500,
+      "tax": 84,
+      "seats": 3,
+      "airlines": "LH",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-03T20:25:43Z"
+    },
+    {
+     "date": "2027-01-08",
+     "program": "alaska",
+     "econ": {
+      "pts": 26500,
+      "tax": 102,
+      "seats": 9,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T11:25:43Z"
+    },
+    {
+     "date": "2027-01-08",
+     "program": "eurobonus",
+     "econ": {
+      "pts": 34000,
+      "tax": 80,
+      "seats": 2,
+      "airlines": "AF",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T00:25:43Z"
+    },
+    {
+     "date": "2027-01-09",
+     "program": "eurobonus",
+     "econ": {
+      "pts": 30500,
+      "tax": 92,
+      "seats": 1,
+      "airlines": "ET",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T16:25:43Z"
+    },
+    {
+     "date": "2027-01-10",
+     "program": "alaska",
+     "econ": {
+      "pts": 36500,
+      "tax": 44,
+      "seats": 8,
+      "airlines": "ET",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T00:25:43Z"
+    },
+    {
+     "date": "2027-01-10",
+     "program": "lifemiles",
+     "econ": {
+      "pts": 33500,
+      "tax": 68,
+      "seats": 5,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T22:25:43Z"
+    }
+   ],
+   "CDG": [
+    {
+     "date": "2027-01-05",
+     "program": "alaska",
+     "econ": null,
+     "biz": {
+      "pts": 69500,
+      "tax": 252,
+      "seats": 6,
+      "airlines": "EK",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T00:25:43Z"
+    },
+    {
+     "date": "2027-01-06",
+     "program": "ethiopian",
+     "econ": {
+      "pts": 31000,
+      "tax": 64,
+      "seats": 9,
+      "airlines": "EK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T00:25:43Z"
+    },
+    {
+     "date": "2027-01-09",
+     "program": "alaska",
+     "econ": null,
+     "biz": {
+      "pts": 62500,
+      "tax": 257,
+      "seats": 7,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T16:25:43Z"
+    }
+   ],
+   "JNB": [
+    {
+     "date": "2027-01-04",
+     "program": "finnair",
+     "econ": null,
+     "biz": {
+      "pts": 70500,
+      "tax": 73,
+      "seats": 9,
+      "airlines": "BA",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T03:25:43Z"
+    },
+    {
+     "date": "2027-01-05",
+     "program": "finnair",
+     "econ": {
+      "pts": 31500,
+      "tax": 140,
+      "seats": 5,
+      "airlines": "QR",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": {
+      "pts": 69500,
+      "tax": 273,
+      "seats": 7,
+      "airlines": "QR",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T13:25:43Z"
+    },
+    {
+     "date": "2027-01-06",
+     "program": "velocity",
+     "econ": {
+      "pts": 26000,
+      "tax": 130,
+      "seats": 5,
+      "airlines": "QR",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T14:25:43Z"
+    },
+    {
+     "date": "2027-01-08",
+     "program": "velocity",
+     "econ": {
+      "pts": 25000,
+      "tax": 86,
+      "seats": 8,
+      "airlines": "TP",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T11:25:43Z"
+    },
+    {
+     "date": "2027-01-09",
+     "program": "velocity",
+     "econ": {
+      "pts": 26500,
+      "tax": 138,
+      "seats": 2,
+      "airlines": "TK",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T22:25:43Z"
+    },
+    {
+     "date": "2027-01-10",
+     "program": "finnair",
+     "econ": {
+      "pts": 35000,
+      "tax": 94,
+      "seats": 4,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T20:25:43Z"
+    }
+   ],
+   "CPT": [
+    {
+     "date": "2027-01-05",
+     "program": "united",
+     "econ": {
+      "pts": 34000,
+      "tax": 166,
+      "seats": 9,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": {
+      "pts": 75000,
+      "tax": 72,
+      "seats": 5,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T16:25:43Z"
+    },
+    {
+     "date": "2027-01-06",
+     "program": "saudia",
+     "econ": {
+      "pts": 34000,
+      "tax": 40,
+      "seats": 7,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T10:25:43Z"
+    },
+    {
+     "date": "2027-01-06",
+     "program": "united",
+     "econ": {
+      "pts": 35000,
+      "tax": 61,
+      "seats": 4,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T13:25:43Z"
+    },
+    {
+     "date": "2027-01-07",
+     "program": "saudia",
+     "econ": {
+      "pts": 30000,
+      "tax": 32,
+      "seats": 7,
+      "airlines": "BA",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": {
+      "pts": 66000,
+      "tax": 202,
+      "seats": 2,
+      "airlines": "BA",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T18:25:43Z"
+    },
+    {
+     "date": "2027-01-08",
+     "program": "saudia",
+     "econ": {
+      "pts": 37000,
+      "tax": 166,
+      "seats": 1,
+      "airlines": "BA",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T19:25:43Z"
+    },
+    {
+     "date": "2027-01-08",
+     "program": "united",
+     "econ": {
+      "pts": 31000,
+      "tax": 124,
+      "seats": 2,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T17:25:43Z"
+    },
+    {
+     "date": "2027-01-09",
+     "program": "saudia",
+     "econ": {
+      "pts": 28000,
+      "tax": 146,
+      "seats": 5,
+      "airlines": "BA",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T23:25:43Z"
+    },
+    {
+     "date": "2027-01-10",
+     "program": "etihad",
+     "econ": {
+      "pts": 39500,
+      "tax": 47,
+      "seats": 3,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T09:25:43Z"
+    }
+   ],
+   "ADD": [
+    {
+     "date": "2027-01-04",
+     "program": "alaska",
+     "econ": null,
+     "biz": {
+      "pts": 65000,
+      "tax": 294,
+      "seats": 3,
+      "airlines": "LH",
+      "stops": 1,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T05:25:43Z"
+    },
+    {
+     "date": "2027-01-04",
+     "program": "american",
+     "econ": {
+      "pts": 32500,
+      "tax": 198,
+      "seats": 8,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T16:25:43Z"
+    },
+    {
+     "date": "2027-01-05",
+     "program": "alaska",
+     "econ": null,
+     "biz": {
+      "pts": 82500,
+      "tax": 245,
+      "seats": 4,
+      "airlines": "EK",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T14:25:43Z"
+    },
+    {
+     "date": "2027-01-05",
+     "program": "american",
+     "econ": {
+      "pts": 30500,
+      "tax": 119,
+      "seats": 5,
+      "airlines": "LH",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T21:25:43Z"
+    },
+    {
+     "date": "2027-01-05",
+     "program": "lufthansa",
+     "econ": {
+      "pts": 34000,
+      "tax": 64,
+      "seats": 8,
+      "airlines": "ET",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T03:25:43Z"
+    },
+    {
+     "date": "2027-01-06",
+     "program": "american",
+     "econ": {
+      "pts": 38000,
+      "tax": 137,
+      "seats": 4,
+      "airlines": "LH",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T00:25:43Z"
+    },
+    {
+     "date": "2027-01-06",
+     "program": "lufthansa",
+     "econ": {
+      "pts": 36500,
+      "tax": 188,
+      "seats": 9,
+      "airlines": "ET",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T13:25:43Z"
+    },
+    {
+     "date": "2027-01-07",
+     "program": "alaska",
+     "econ": {
+      "pts": 27000,
+      "tax": 85,
+      "seats": 7,
+      "airlines": "ET",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": {
+      "pts": 59500,
+      "tax": 179,
+      "seats": 8,
+      "airlines": "ET",
+      "stops": 1,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T00:25:43Z"
+    },
+    {
+     "date": "2027-01-07",
+     "program": "american",
+     "econ": {
+      "pts": 39000,
+      "tax": 173,
+      "seats": 5,
+      "airlines": "LH",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T23:25:43Z"
+    },
+    {
+     "date": "2027-01-08",
+     "program": "lufthansa",
+     "econ": {
+      "pts": 40000,
+      "tax": 107,
+      "seats": 5,
+      "airlines": "LH",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T07:25:43Z"
+    },
+    {
+     "date": "2027-01-09",
+     "program": "alaska",
+     "econ": {
+      "pts": 33000,
+      "tax": 117,
+      "seats": 6,
+      "airlines": "ET",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T10:25:43Z"
+    },
+    {
+     "date": "2027-01-10",
+     "program": "american",
+     "econ": {
+      "pts": 33000,
+      "tax": 197,
+      "seats": 5,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T12:25:43Z"
+    },
+    {
+     "date": "2027-01-10",
+     "program": "lufthansa",
+     "econ": {
+      "pts": 31000,
+      "tax": 99,
+      "seats": 2,
+      "airlines": "TP",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T02:25:43Z"
+    }
+   ],
+   "BLR": [
+    {
+     "date": "2027-01-04",
+     "program": "delta",
+     "econ": null,
+     "biz": {
+      "pts": 126500,
+      "tax": 58,
+      "seats": 2,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T01:25:43Z"
+    },
+    {
+     "date": "2027-01-04",
+     "program": "ethiopian",
+     "econ": {
+      "pts": 42000,
+      "tax": 151,
+      "seats": 7,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T16:25:43Z"
+    },
+    {
+     "date": "2027-01-05",
+     "program": "qantas",
+     "econ": null,
+     "biz": {
+      "pts": 126500,
+      "tax": 180,
+      "seats": 2,
+      "airlines": "EK",
+      "stops": 0,
+      "flights": null
+     },
+     "seenAt": "2026-10-04T00:25:43Z"
+    },
+    {
+     "date": "2027-01-05",
+     "program": "delta",
+     "econ": {
+      "pts": 42500,
+      "tax": 135,
+      "seats": 8,
+      "airlines": "AF",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T18:25:43Z"
+    },
+    {
+     "date": "2027-01-07",
+     "program": "delta",
+     "econ": {
+      "pts": 51500,
+      "tax": 166,
+      "seats": 9,
+      "airlines": "LH",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T15:25:43Z"
+    },
+    {
+     "date": "2027-01-08",
+     "program": "delta",
+     "econ": {
+      "pts": 58000,
+      "tax": 162,
+      "seats": 7,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T06:25:43Z"
+    },
+    {
+     "date": "2027-01-09",
+     "program": "qantas",
+     "econ": {
+      "pts": 56000,
+      "tax": 145,
+      "seats": 2,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T03:25:43Z"
+    },
+    {
+     "date": "2027-01-09",
+     "program": "delta",
+     "econ": {
+      "pts": 42500,
+      "tax": 128,
+      "seats": 3,
+      "airlines": "ET",
+      "stops": 1,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T04:25:43Z"
+    },
+    {
+     "date": "2027-01-09",
+     "program": "ethiopian",
+     "econ": {
+      "pts": 42500,
+      "tax": 122,
+      "seats": 3,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T12:25:43Z"
+    },
+    {
+     "date": "2027-01-10",
+     "program": "qantas",
+     "econ": {
+      "pts": 51000,
+      "tax": 104,
+      "seats": 8,
+      "airlines": "TK",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-05T00:25:43Z"
+    }
+   ],
+   "BKK": [
+    {
+     "date": "2027-01-05",
+     "program": "delta",
+     "econ": null,
+     "biz": {
+      "pts": 113500,
+      "tax": 90,
+      "seats": 1,
+      "airlines": "BA",
+      "stops": 1,
+      "flights": null
+     },
+     "seenAt": "2026-10-03T19:25:43Z"
+    },
+    {
+     "date": "2027-01-05",
+     "program": "lufthansa",
+     "econ": {
+      "pts": 53000,
+      "tax": 140,
+      "seats": 5,
+      "airlines": "QR",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-03T20:25:43Z"
+    },
+    {
+     "date": "2027-01-06",
+     "program": "lufthansa",
+     "econ": {
+      "pts": 61000,
+      "tax": 86,
+      "seats": 8,
+      "airlines": "AF",
+      "stops": 0,
+      "flights": null
+     },
+     "biz": null,
+     "seenAt": "2026-10-04T22:25:43Z"
+    }
+   ]
+  }
+ },
+ "roundtrip": {
+  "updatedAt": "2026-10-05T01:25:43Z",
+  "sample": true,
+  "searches": 0,
+  "combos": [
+   {
+    "out": "2026-12-15",
+    "back": "2027-01-04",
+    "checkedAt": "2026-10-05T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 12110,
+      "airlines": "Qatar Airways",
+      "hoursOut": 22.1,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 7940,
+      "airlines": "Lufthansa",
+      "hoursOut": 22.0,
+      "stops": 1
+     }
+    },
+    "fav": true
+   },
+   {
+    "out": "2026-12-15",
+    "back": "2027-01-05",
+    "checkedAt": "2026-10-05T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 9180,
+      "airlines": "Qatar Airways",
+      "hoursOut": 22.6,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 7920,
+      "airlines": "Lufthansa",
+      "hoursOut": 22.3,
+      "stops": 1
+     }
+    },
+    "fav": true
+   },
+   {
+    "out": "2026-12-15",
+    "back": "2027-01-06",
+    "checkedAt": "2026-10-03T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 10670,
+      "airlines": "Qatar Airways",
+      "hoursOut": 23.4,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 8400,
+      "airlines": "Lufthansa",
+      "hoursOut": 20.6,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-15",
+    "back": "2027-01-07",
+    "checkedAt": "2026-09-26T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 8700,
+      "airlines": "Qatar Airways",
+      "hoursOut": 20.6,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 11390,
+      "airlines": "Lufthansa",
+      "hoursOut": 24.3,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-15",
+    "back": "2027-01-08",
+    "checkedAt": "2026-09-30T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 11140,
+      "airlines": "Qatar Airways",
+      "hoursOut": 21.2,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 10030,
+      "airlines": "Lufthansa",
+      "hoursOut": 24.6,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-16",
+    "back": "2027-01-04",
+    "checkedAt": "2026-10-05T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 7820,
+      "airlines": "Qatar Airways",
+      "hoursOut": 24.5,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 10380,
+      "airlines": "Lufthansa",
+      "hoursOut": 23.4,
+      "stops": 1
+     }
+    },
+    "fav": true
+   },
+   {
+    "out": "2026-12-16",
+    "back": "2027-01-05",
+    "checkedAt": "2026-09-26T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 9770,
+      "airlines": "Qatar Airways",
+      "hoursOut": 21.6,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 9340,
+      "airlines": "Lufthansa",
+      "hoursOut": 20.8,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-16",
+    "back": "2027-01-06",
+    "checkedAt": "2026-09-28T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 10600,
+      "airlines": "Qatar Airways",
+      "hoursOut": 21.3,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 8190,
+      "airlines": "Lufthansa",
+      "hoursOut": 24.4,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-16",
+    "back": "2027-01-07",
+    "checkedAt": "2026-10-01T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 9080,
+      "airlines": "Qatar Airways",
+      "hoursOut": 24.9,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 8630,
+      "airlines": "Lufthansa",
+      "hoursOut": 21.4,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-16",
+    "back": "2027-01-08",
+    "checkedAt": "2026-09-25T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 12400,
+      "airlines": "Qatar Airways",
+      "hoursOut": 24.4,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 11440,
+      "airlines": "Lufthansa",
+      "hoursOut": 24.1,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-17",
+    "back": "2027-01-04",
+    "checkedAt": "2026-09-28T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 12520,
+      "airlines": "Qatar Airways",
+      "hoursOut": 22.4,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 10270,
+      "airlines": "Lufthansa",
+      "hoursOut": 20.5,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-17",
+    "back": "2027-01-05",
+    "checkedAt": "2026-10-02T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 9870,
+      "airlines": "Qatar Airways",
+      "hoursOut": 24.3,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 8910,
+      "airlines": "Lufthansa",
+      "hoursOut": 21.2,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-17",
+    "back": "2027-01-06",
+    "checkedAt": "2026-09-27T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 10440,
+      "airlines": "Qatar Airways",
+      "hoursOut": 20.4,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 9350,
+      "airlines": "Lufthansa",
+      "hoursOut": 23.9,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-17",
+    "back": "2027-01-07",
+    "checkedAt": "2026-09-29T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 8880,
+      "airlines": "Qatar Airways",
+      "hoursOut": 22.1,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 11520,
+      "airlines": "Lufthansa",
+      "hoursOut": 23.7,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-17",
+    "back": "2027-01-08",
+    "checkedAt": "2026-09-29T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 10780,
+      "airlines": "Qatar Airways",
+      "hoursOut": 22.9,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 11770,
+      "airlines": "Lufthansa",
+      "hoursOut": 21.3,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-18",
+    "back": "2027-01-04",
+    "checkedAt": "2026-09-29T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 10230,
+      "airlines": "Qatar Airways",
+      "hoursOut": 21.1,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 9910,
+      "airlines": "Lufthansa",
+      "hoursOut": 21.2,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-18",
+    "back": "2027-01-05",
+    "checkedAt": "2026-10-04T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 11810,
+      "airlines": "Qatar Airways",
+      "hoursOut": 24.9,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 10320,
+      "airlines": "Lufthansa",
+      "hoursOut": 21.9,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-18",
+    "back": "2027-01-06",
+    "checkedAt": "2026-09-25T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 12120,
+      "airlines": "Qatar Airways",
+      "hoursOut": 24.0,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 10860,
+      "airlines": "Lufthansa",
+      "hoursOut": 22.3,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-18",
+    "back": "2027-01-07",
+    "checkedAt": "2026-10-05T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 9280,
+      "airlines": "Qatar Airways",
+      "hoursOut": 22.7,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 11270,
+      "airlines": "Lufthansa",
+      "hoursOut": 24.3,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-18",
+    "back": "2027-01-08",
+    "checkedAt": "2026-10-03T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 12320,
+      "airlines": "Qatar Airways",
+      "hoursOut": 24.4,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 8710,
+      "airlines": "Lufthansa",
+      "hoursOut": 22.6,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-19",
+    "back": "2027-01-04",
+    "checkedAt": "2026-10-02T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 8840,
+      "airlines": "Qatar Airways",
+      "hoursOut": 21.6,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 11840,
+      "airlines": "Lufthansa",
+      "hoursOut": 21.6,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-19",
+    "back": "2027-01-05",
+    "checkedAt": "2026-10-01T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 10100,
+      "airlines": "Qatar Airways",
+      "hoursOut": 25.0,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 12420,
+      "airlines": "Lufthansa",
+      "hoursOut": 20.1,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-19",
+    "back": "2027-01-06",
+    "checkedAt": "2026-09-25T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 12750,
+      "airlines": "Qatar Airways",
+      "hoursOut": 21.2,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 12640,
+      "airlines": "Lufthansa",
+      "hoursOut": 20.5,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-19",
+    "back": "2027-01-07",
+    "checkedAt": "2026-10-03T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 8730,
+      "airlines": "Qatar Airways",
+      "hoursOut": 23.4,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 8470,
+      "airlines": "Lufthansa",
+      "hoursOut": 23.4,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-19",
+    "back": "2027-01-08",
+    "checkedAt": "2026-10-05T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 8180,
+      "airlines": "Qatar Airways",
+      "hoursOut": 21.9,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 8310,
+      "airlines": "Lufthansa",
+      "hoursOut": 23.7,
+      "stops": 1
+     }
+    },
+    "fav": true
+   },
+   {
+    "out": "2026-12-20",
+    "back": "2027-01-04",
+    "checkedAt": "2026-09-27T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 9170,
+      "airlines": "Qatar Airways",
+      "hoursOut": 21.0,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 10580,
+      "airlines": "Lufthansa",
+      "hoursOut": 20.9,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-20",
+    "back": "2027-01-05",
+    "checkedAt": "2026-10-04T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 10640,
+      "airlines": "Qatar Airways",
+      "hoursOut": 22.2,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 8470,
+      "airlines": "Lufthansa",
+      "hoursOut": 22.4,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-20",
+    "back": "2027-01-06",
+    "checkedAt": "2026-10-05T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 11870,
+      "airlines": "Qatar Airways",
+      "hoursOut": 24.5,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 9120,
+      "airlines": "Lufthansa",
+      "hoursOut": 22.0,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-20",
+    "back": "2027-01-07",
+    "checkedAt": "2026-10-03T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 11690,
+      "airlines": "Qatar Airways",
+      "hoursOut": 24.5,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 10850,
+      "airlines": "Lufthansa",
+      "hoursOut": 24.4,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-20",
+    "back": "2027-01-08",
+    "checkedAt": "2026-09-25T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 12130,
+      "airlines": "Qatar Airways",
+      "hoursOut": 23.8,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 9060,
+      "airlines": "Lufthansa",
+      "hoursOut": 20.6,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-21",
+    "back": "2027-01-04",
+    "checkedAt": "2026-10-03T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 10290,
+      "airlines": "Qatar Airways",
+      "hoursOut": 21.7,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 10120,
+      "airlines": "Lufthansa",
+      "hoursOut": 22.0,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-21",
+    "back": "2027-01-05",
+    "checkedAt": "2026-09-25T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 12540,
+      "airlines": "Qatar Airways",
+      "hoursOut": 21.6,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 9950,
+      "airlines": "Lufthansa",
+      "hoursOut": 23.4,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-21",
+    "back": "2027-01-06",
+    "checkedAt": "2026-09-25T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 8900,
+      "airlines": "Qatar Airways",
+      "hoursOut": 22.5,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 9240,
+      "airlines": "Lufthansa",
+      "hoursOut": 24.9,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-21",
+    "back": "2027-01-07",
+    "checkedAt": "2026-10-01T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 12780,
+      "airlines": "Qatar Airways",
+      "hoursOut": 24.0,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 11660,
+      "airlines": "Lufthansa",
+      "hoursOut": 21.1,
+      "stops": 1
+     }
+    },
+    "fav": false
+   },
+   {
+    "out": "2026-12-21",
+    "back": "2027-01-08",
+    "checkedAt": "2026-09-28T01:25:43Z",
+    "via": {
+     "DOH": {
+      "price": 11220,
+      "airlines": "Qatar Airways",
+      "hoursOut": 20.3,
+      "stops": 1
+     },
+     "FRA": {
+      "price": 8680,
+      "airlines": "Lufthansa",
+      "hoursOut": 24.2,
+      "stops": 1
+     }
+    },
+    "fav": false
+   }
+  ]
+ }
+}
