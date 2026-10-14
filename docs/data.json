@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-13T22:18:39Z",
+ "generatedAt": "2026-10-14T10:21:51Z",
  "config": {
   "origin": "GRU",
   "miles": {
@@ -237,9 +237,9 @@
   "fx": 5.4
  },
  "serpapi": {
-  "searchesLeft": 128,
+  "searchesLeft": 121,
   "searchesPerMonth": 250,
-  "checkedAt": "2026-10-13T22:18:40Z"
+  "checkedAt": "2026-10-14T10:23:11Z"
  },
  "miles": {
   "updatedAt": "2026-10-05T01:25:43Z",
@@ -3788,23 +3788,23 @@
   }
  },
  "roundtrip": {
-  "updatedAt": "2026-10-13T10:11:21Z",
+  "updatedAt": "2026-10-14T10:23:11Z",
   "sample": false,
   "searches": 7,
   "combos": [
    {
     "out": "2026-12-15",
     "back": "2027-01-04",
-    "checkedAt": "2026-10-08T10:09:49Z",
+    "checkedAt": "2026-10-14T10:23:11Z",
     "via": {
      "DOH": {
-      "price": 14718,
+      "price": 12326,
       "airlines": "IndiGo, Qatar Airways",
       "hoursOut": 21.9,
       "stops": 1
      },
      "FRA": {
-      "price": 15649,
+      "price": 16428,
       "airlines": "Lufthansa",
       "hoursOut": 22.6,
       "stops": 1
@@ -3815,22 +3815,22 @@
    {
     "out": "2026-12-15",
     "back": "2027-01-05",
-    "checkedAt": "2026-10-08T10:09:32Z",
+    "checkedAt": "2026-10-14T10:22:58Z",
     "via": {
      "DOH": {
-      "price": 14138,
+      "price": 11745,
       "airlines": "IndiGo, Qatar Airways",
       "hoursOut": 21.9,
       "stops": 1
      },
      "FRA": {
-      "price": 16929,
+      "price": 17032,
       "airlines": "Lufthansa",
       "hoursOut": 22.6,
       "stops": 1
      }
     },
-    "fav": false
+    "fav": true
    },
    {
     "out": "2026-12-15",
@@ -3890,7 +3890,7 @@
       "stops": 1
      }
     },
-    "fav": false
+    "fav": true
    },
    {
     "out": "2026-12-16",
@@ -3935,22 +3935,22 @@
    {
     "out": "2026-12-16",
     "back": "2027-01-06",
-    "checkedAt": "2026-10-13T10:10:30Z",
+    "checkedAt": "2026-10-14T10:22:08Z",
     "via": {
      "DOH": {
-      "price": 10878,
+      "price": 13574,
       "airlines": "IndiGo, Qatar Airways",
       "hoursOut": 21.9,
       "stops": 1
      },
      "FRA": {
-      "price": 16458,
+      "price": 16542,
       "airlines": "Lufthansa",
       "hoursOut": 22.6,
       "stops": 1
      }
     },
-    "fav": true
+    "fav": false
    },
    {
     "out": "2026-12-16",
@@ -4075,16 +4075,16 @@
    {
     "out": "2026-12-17",
     "back": "2027-01-08",
-    "checkedAt": "2026-10-06T10:08:46Z",
+    "checkedAt": "2026-10-14T10:22:46Z",
     "via": {
      "DOH": {
-      "price": 13024,
+      "price": 15863,
       "airlines": "IndiGo, Qatar Airways",
-      "hoursOut": 27.7,
+      "hoursOut": 21.9,
       "stops": 1
      },
      "FRA": {
-      "price": 20968,
+      "price": 18222,
       "airlines": "Lufthansa",
       "hoursOut": 22.6,
       "stops": 1
@@ -4150,7 +4150,7 @@
       "stops": 1
      }
     },
-    "fav": false
+    "fav": true
    },
    {
     "out": "2026-12-18",
@@ -4395,42 +4395,42 @@
    {
     "out": "2026-12-21",
     "back": "2027-01-04",
-    "checkedAt": "2026-10-13T10:10:38Z",
+    "checkedAt": "2026-10-14T10:22:27Z",
     "via": {
      "DOH": {
-      "price": 10878,
+      "price": 12915,
       "airlines": "IndiGo, Qatar Airways",
       "hoursOut": 37.1,
       "stops": 1
      },
      "FRA": {
-      "price": 15947,
+      "price": 16031,
       "airlines": "Lufthansa",
       "hoursOut": 45.8,
       "stops": 2
      }
     },
-    "fav": true
+    "fav": false
    },
    {
     "out": "2026-12-21",
     "back": "2027-01-05",
-    "checkedAt": "2026-10-13T10:10:15Z",
+    "checkedAt": "2026-10-14T10:22:00Z",
     "via": {
      "DOH": {
-      "price": 10305,
+      "price": 12339,
       "airlines": "IndiGo, Qatar Airways",
       "hoursOut": 37.1,
       "stops": 1
      },
      "FRA": {
-      "price": 16543,
+      "price": 16635,
       "airlines": "Lufthansa",
-      "hoursOut": 22.6,
-      "stops": 1
+      "hoursOut": 45.8,
+      "stops": 2
      }
     },
-    "fav": true
+    "fav": false
    },
    {
     "out": "2026-12-21",
@@ -4450,27 +4450,27 @@
       "stops": 2
      }
     },
-    "fav": false
+    "fav": true
    },
    {
     "out": "2026-12-21",
     "back": "2027-01-07",
-    "checkedAt": "2026-10-13T10:10:52Z",
+    "checkedAt": "2026-10-14T10:22:36Z",
     "via": {
      "DOH": {
-      "price": 10878,
+      "price": 14398,
       "airlines": "IndiGo, Qatar Airways",
       "hoursOut": 37.1,
       "stops": 1
      },
      "FRA": {
-      "price": 15075,
+      "price": 15132,
       "airlines": "Lufthansa",
       "hoursOut": 45.8,
       "stops": 2
      }
     },
-    "fav": true
+    "fav": false
    },
    {
     "out": "2026-12-21",
