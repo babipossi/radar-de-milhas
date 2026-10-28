@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-28T00:58:07Z",
+ "generatedAt": "2026-10-28T16:23:42Z",
  "config": {
   "origin": "GRU",
   "miles": {
@@ -237,9 +237,9 @@
   "fx": 5.4
  },
  "serpapi": {
-  "searchesLeft": 187,
+  "searchesLeft": 180,
   "searchesPerMonth": 250,
-  "checkedAt": "2026-10-28T00:58:07Z"
+  "checkedAt": "2026-10-28T16:24:48Z"
  },
  "miles": {
   "updatedAt": "2026-10-05T01:25:43Z",
@@ -3788,23 +3788,23 @@
   }
  },
  "roundtrip": {
-  "updatedAt": "2026-10-27T15:41:00Z",
+  "updatedAt": "2026-10-28T16:24:48Z",
   "sample": false,
   "searches": 7,
   "combos": [
    {
     "out": "2026-12-15",
     "back": "2027-01-04",
-    "checkedAt": "2026-10-27T15:39:58Z",
+    "checkedAt": "2026-10-28T16:23:51Z",
     "via": {
      "DOH": {
-      "price": 14483,
+      "price": 14102,
       "airlines": "Qatar Airways",
-      "hoursOut": 30.8,
+      "hoursOut": 39.7,
       "stops": 1
      },
      "FRA": {
-      "price": 18468,
+      "price": 17994,
       "airlines": "Lufthansa",
       "hoursOut": 22.6,
       "stops": 1
@@ -3855,22 +3855,22 @@
    {
     "out": "2026-12-15",
     "back": "2027-01-07",
-    "checkedAt": "2026-10-25T14:03:16Z",
+    "checkedAt": "2026-10-28T16:24:00Z",
     "via": {
      "DOH": {
-      "price": 14529,
+      "price": 15558,
       "airlines": "Qatar Airways",
-      "hoursOut": 21.4,
+      "hoursOut": 39.7,
       "stops": 1
      },
      "FRA": {
-      "price": 16573,
+      "price": 16733,
       "airlines": "Lufthansa",
       "hoursOut": 22.6,
       "stops": 1
      }
     },
-    "fav": true
+    "fav": false
    },
    {
     "out": "2026-12-15",
@@ -4035,22 +4035,22 @@
    {
     "out": "2026-12-17",
     "back": "2027-01-06",
-    "checkedAt": "2026-10-24T13:47:28Z",
+    "checkedAt": "2026-10-28T16:24:19Z",
     "via": {
      "DOH": {
-      "price": 14696,
+      "price": 16017,
       "airlines": "Qatar Airways",
-      "hoursOut": 39.7,
+      "hoursOut": 21.4,
       "stops": 1
      },
      "FRA": {
-      "price": 18815,
+      "price": 18333,
       "airlines": "Lufthansa",
       "hoursOut": 22.6,
       "stops": 1
      }
     },
-    "fav": true
+    "fav": false
    },
    {
     "out": "2026-12-17",
@@ -4215,19 +4215,19 @@
    {
     "out": "2026-12-19",
     "back": "2027-01-05",
-    "checkedAt": "2026-10-21T14:48:33Z",
+    "checkedAt": "2026-10-28T16:24:27Z",
     "via": {
      "DOH": {
-      "price": 17302,
+      "price": 18415,
       "airlines": "Qatar Airways",
       "hoursOut": 21.4,
       "stops": 1
      },
      "FRA": {
-      "price": 18730,
-      "airlines": "Air India, Lufthansa",
-      "hoursOut": 29.6,
-      "stops": 2
+      "price": 22601,
+      "airlines": "Lufthansa",
+      "hoursOut": 22.6,
+      "stops": 1
      }
     },
     "fav": false
@@ -4310,7 +4310,7 @@
       "stops": 1
      }
     },
-    "fav": false
+    "fav": true
    },
    {
     "out": "2026-12-20",
@@ -4355,16 +4355,16 @@
    {
     "out": "2026-12-20",
     "back": "2027-01-07",
-    "checkedAt": "2026-10-21T14:48:43Z",
+    "checkedAt": "2026-10-28T16:24:34Z",
     "via": {
      "DOH": {
-      "price": 15307,
+      "price": 17364,
       "airlines": "Qatar Airways",
       "hoursOut": 21.4,
       "stops": 1
      },
      "FRA": {
-      "price": 17952,
+      "price": 18333,
       "airlines": "Lufthansa",
       "hoursOut": 22.6,
       "stops": 1
@@ -4375,16 +4375,16 @@
    {
     "out": "2026-12-20",
     "back": "2027-01-08",
-    "checkedAt": "2026-10-21T14:48:51Z",
+    "checkedAt": "2026-10-28T16:24:48Z",
     "via": {
      "DOH": {
-      "price": 15978,
+      "price": 18079,
       "airlines": "Qatar Airways",
       "hoursOut": 21.4,
       "stops": 1
      },
      "FRA": {
-      "price": 18574,
+      "price": 19934,
       "airlines": "Lufthansa",
       "hoursOut": 22.6,
       "stops": 1
@@ -4410,7 +4410,7 @@
       "stops": 2
      }
     },
-    "fav": false
+    "fav": true
    },
    {
     "out": "2026-12-21",
@@ -4435,19 +4435,19 @@
    {
     "out": "2026-12-21",
     "back": "2027-01-06",
-    "checkedAt": "2026-10-23T14:35:17Z",
+    "checkedAt": "2026-10-28T16:24:09Z",
     "via": {
      "DOH": {
-      "price": 14586,
+      "price": 14842,
       "airlines": "Qatar Airways",
       "hoursOut": 30.8,
       "stops": 1
      },
      "FRA": {
-      "price": 16789,
+      "price": 15586,
       "airlines": "Lufthansa",
-      "hoursOut": 22.6,
-      "stops": 1
+      "hoursOut": 45.8,
+      "stops": 2
      }
     },
     "fav": true
