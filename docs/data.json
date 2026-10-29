@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-28T16:23:42Z",
+ "generatedAt": "2026-10-29T01:31:53Z",
  "config": {
   "origin": "GRU",
   "miles": {
@@ -239,7 +239,7 @@
  "serpapi": {
   "searchesLeft": 180,
   "searchesPerMonth": 250,
-  "checkedAt": "2026-10-28T16:24:48Z"
+  "checkedAt": "2026-10-29T01:31:54Z"
  },
  "miles": {
   "updatedAt": "2026-10-05T01:25:43Z",
