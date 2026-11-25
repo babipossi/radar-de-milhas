@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-25T04:46:05Z",
+ "generatedAt": "2026-11-25T19:42:06Z",
  "config": {
   "origin": "GRU",
   "miles": {
@@ -237,9 +237,9 @@
   "fx": 5.4
  },
  "serpapi": {
-  "searchesLeft": 208,
+  "searchesLeft": 201,
   "searchesPerMonth": 250,
-  "checkedAt": "2026-11-25T04:46:05Z"
+  "checkedAt": "2026-11-25T19:43:16Z"
  },
  "miles": {
   "updatedAt": "2026-10-05T01:25:43Z",
@@ -3788,7 +3788,7 @@
   }
  },
  "roundtrip": {
-  "updatedAt": "2026-11-24T20:28:43Z",
+  "updatedAt": "2026-11-25T19:43:16Z",
   "sample": false,
   "searches": 7,
   "combos": [
@@ -3855,16 +3855,16 @@
    {
     "out": "2026-12-15",
     "back": "2027-01-07",
-    "checkedAt": "2026-11-24T20:27:28Z",
+    "checkedAt": "2026-11-25T19:42:19Z",
     "via": {
      "DOH": {
-      "price": 17369,
+      "price": 17057,
       "airlines": "Qatar Airways",
       "hoursOut": 21.4,
       "stops": 1
      },
      "FRA": {
-      "price": 23051,
+      "price": 22420,
       "airlines": "Lufthansa",
       "hoursOut": 22.6,
       "stops": 1
@@ -3935,16 +3935,16 @@
    {
     "out": "2026-12-16",
     "back": "2027-01-06",
-    "checkedAt": "2026-11-24T20:28:03Z",
+    "checkedAt": "2026-11-25T19:42:45Z",
     "via": {
      "DOH": {
-      "price": 18185,
+      "price": 17857,
       "airlines": "IndiGo, Qatar Airways",
       "hoursOut": 21.8,
       "stops": 1
      },
      "FRA": {
-      "price": 24477,
+      "price": 25009,
       "airlines": "Lufthansa",
       "hoursOut": 22.6,
       "stops": 1
@@ -3955,16 +3955,16 @@
    {
     "out": "2026-12-16",
     "back": "2027-01-07",
-    "checkedAt": "2026-11-24T20:27:54Z",
+    "checkedAt": "2026-11-25T19:42:28Z",
     "via": {
      "DOH": {
-      "price": 17369,
+      "price": 17057,
       "airlines": "IndiGo, Qatar Airways",
       "hoursOut": 21.8,
       "stops": 1
      },
      "FRA": {
-      "price": 23222,
+      "price": 22411,
       "airlines": "Lufthansa",
       "hoursOut": 22.6,
       "stops": 1
@@ -3995,16 +3995,16 @@
    {
     "out": "2026-12-17",
     "back": "2027-01-04",
-    "checkedAt": "2026-11-17T18:55:51Z",
+    "checkedAt": "2026-11-25T19:43:16Z",
     "via": {
      "DOH": {
-      "price": 20156,
+      "price": 19035,
       "airlines": "Qatar Airways",
-      "hoursOut": 21.4,
+      "hoursOut": 39.7,
       "stops": 1
      },
      "FRA": {
-      "price": 24460,
+      "price": 21769,
       "airlines": "Lufthansa",
       "hoursOut": 22.6,
       "stops": 1
@@ -4075,16 +4075,16 @@
    {
     "out": "2026-12-17",
     "back": "2027-01-08",
-    "checkedAt": "2026-11-17T18:55:32Z",
+    "checkedAt": "2026-11-25T19:43:07Z",
     "via": {
      "DOH": {
-      "price": 20156,
+      "price": 19984,
       "airlines": "Qatar Airways",
-      "hoursOut": 21.4,
+      "hoursOut": 39.7,
       "stops": 1
      },
      "FRA": {
-      "price": 24460,
+      "price": 22174,
       "airlines": "Lufthansa",
       "hoursOut": 22.6,
       "stops": 1
@@ -4095,19 +4095,19 @@
    {
     "out": "2026-12-18",
     "back": "2027-01-04",
-    "checkedAt": "2026-11-16T19:58:47Z",
+    "checkedAt": "2026-11-25T19:42:53Z",
     "via": {
      "DOH": {
-      "price": 19358,
+      "price": 21667,
       "airlines": "Qatar Airways",
       "hoursOut": 21.4,
       "stops": 1
      },
      "FRA": {
-      "price": 21298,
+      "price": 20408,
       "airlines": "Lufthansa",
-      "hoursOut": 22.6,
-      "stops": 1
+      "hoursOut": 43.1,
+      "stops": 2
      }
     },
     "fav": false
@@ -4415,22 +4415,22 @@
    {
     "out": "2026-12-21",
     "back": "2027-01-05",
-    "checkedAt": "2026-11-16T19:58:40Z",
+    "checkedAt": "2026-11-25T19:42:41Z",
     "via": {
      "DOH": {
-      "price": 18010,
+      "price": 19870,
       "airlines": "Qatar Airways",
       "hoursOut": 30.8,
       "stops": 1
      },
      "FRA": {
-      "price": 19647,
+      "price": 20025,
       "airlines": "Lufthansa",
-      "hoursOut": 22.6,
-      "stops": 1
+      "hoursOut": 45.8,
+      "stops": 2
      }
     },
-    "fav": true
+    "fav": false
    },
    {
     "out": "2026-12-21",
@@ -4470,7 +4470,7 @@
       "stops": 2
      }
     },
-    "fav": false
+    "fav": true
    },
    {
     "out": "2026-12-21",
