@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-26T03:56:09Z",
+ "generatedAt": "2026-11-26T19:22:42Z",
  "config": {
   "origin": "GRU",
   "miles": {
@@ -237,9 +237,9 @@
   "fx": 5.4
  },
  "serpapi": {
-  "searchesLeft": 201,
+  "searchesLeft": 194,
   "searchesPerMonth": 250,
-  "checkedAt": "2026-11-26T03:56:09Z"
+  "checkedAt": "2026-11-26T19:23:56Z"
  },
  "miles": {
   "updatedAt": "2026-10-05T01:25:43Z",
@@ -3788,7 +3788,7 @@
   }
  },
  "roundtrip": {
-  "updatedAt": "2026-11-25T19:43:16Z",
+  "updatedAt": "2026-11-26T19:23:56Z",
   "sample": false,
   "searches": 7,
   "combos": [
@@ -3855,16 +3855,16 @@
    {
     "out": "2026-12-15",
     "back": "2027-01-07",
-    "checkedAt": "2026-11-25T19:42:19Z",
+    "checkedAt": "2026-11-26T19:22:49Z",
     "via": {
      "DOH": {
-      "price": 17057,
+      "price": 17118,
       "airlines": "Qatar Airways",
       "hoursOut": 21.4,
       "stops": 1
      },
      "FRA": {
-      "price": 22420,
+      "price": 22747,
       "airlines": "Lufthansa",
       "hoursOut": 22.6,
       "stops": 1
@@ -3935,16 +3935,16 @@
    {
     "out": "2026-12-16",
     "back": "2027-01-06",
-    "checkedAt": "2026-11-25T19:42:45Z",
+    "checkedAt": "2026-11-26T19:23:07Z",
     "via": {
      "DOH": {
-      "price": 17857,
-      "airlines": "IndiGo, Qatar Airways",
-      "hoursOut": 21.8,
+      "price": 17922,
+      "airlines": "Qatar Airways",
+      "hoursOut": 21.4,
       "stops": 1
      },
      "FRA": {
-      "price": 25009,
+      "price": 22696,
       "airlines": "Lufthansa",
       "hoursOut": 22.6,
       "stops": 1
@@ -3955,16 +3955,16 @@
    {
     "out": "2026-12-16",
     "back": "2027-01-07",
-    "checkedAt": "2026-11-25T19:42:28Z",
+    "checkedAt": "2026-11-26T19:22:59Z",
     "via": {
      "DOH": {
-      "price": 17057,
+      "price": 17118,
       "airlines": "IndiGo, Qatar Airways",
       "hoursOut": 21.8,
       "stops": 1
      },
      "FRA": {
-      "price": 22411,
+      "price": 22659,
       "airlines": "Lufthansa",
       "hoursOut": 22.6,
       "stops": 1
@@ -4015,16 +4015,16 @@
    {
     "out": "2026-12-17",
     "back": "2027-01-05",
-    "checkedAt": "2026-11-18T18:35:33Z",
+    "checkedAt": "2026-11-26T19:23:56Z",
     "via": {
      "DOH": {
-      "price": 20344,
+      "price": 19119,
       "airlines": "Qatar Airways",
-      "hoursOut": 21.4,
+      "hoursOut": 39.7,
       "stops": 1
      },
      "FRA": {
-      "price": 21840,
+      "price": 23619,
       "airlines": "Lufthansa",
       "hoursOut": 22.6,
       "stops": 1
@@ -4135,19 +4135,19 @@
    {
     "out": "2026-12-18",
     "back": "2027-01-06",
-    "checkedAt": "2026-11-18T18:35:10Z",
+    "checkedAt": "2026-11-26T19:23:26Z",
     "via": {
      "DOH": {
-      "price": 19811,
+      "price": 20163,
       "airlines": "Qatar Airways",
       "hoursOut": 21.4,
       "stops": 1
      },
      "FRA": {
-      "price": 20098,
+      "price": 20738,
       "airlines": "Lufthansa",
-      "hoursOut": 22.6,
-      "stops": 1
+      "hoursOut": 43.1,
+      "stops": 2
      }
     },
     "fav": false
@@ -4175,19 +4175,19 @@
    {
     "out": "2026-12-18",
     "back": "2027-01-08",
-    "checkedAt": "2026-11-18T18:35:30Z",
+    "checkedAt": "2026-11-26T19:23:40Z",
     "via": {
      "DOH": {
-      "price": 19811,
+      "price": 21101,
       "airlines": "Qatar Airways",
       "hoursOut": 21.4,
       "stops": 1
      },
      "FRA": {
-      "price": 24687,
+      "price": 20877,
       "airlines": "Lufthansa",
-      "hoursOut": 22.6,
-      "stops": 1
+      "hoursOut": 43.1,
+      "stops": 2
      }
     },
     "fav": false
@@ -4455,16 +4455,16 @@
    {
     "out": "2026-12-21",
     "back": "2027-01-07",
-    "checkedAt": "2026-11-19T18:46:43Z",
+    "checkedAt": "2026-11-26T19:23:16Z",
     "via": {
      "DOH": {
-      "price": 18236,
+      "price": 17957,
       "airlines": "Qatar Airways",
       "hoursOut": 30.8,
       "stops": 1
      },
      "FRA": {
-      "price": 18197,
+      "price": 18408,
       "airlines": "Lufthansa",
       "hoursOut": 45.8,
       "stops": 2
